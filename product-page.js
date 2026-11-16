@@ -63,7 +63,7 @@
    document.getElementById('fixedTotal').textContent=money(fixedPrice(fixedDestination.value));
    document.getElementById('fixedDeliverySummary').textContent=fixedDestination.value==='GB'?t('Includes 20% UK VAT · Free UK delivery','已包括 20% 英國增值稅 · 英國免費送貨'):fixedDestination.value?t('International delivery terms apply.','適用國際送貨條款。'):'';
   };
-  if(matchMedia('(max-width:760px)').matches){fixedDestination.add(new Option(t('Hong Kong','香港'),'HK'),fixedDestination.options[2]);fixedDestination.value=t('GB','HK');updateDelivery();}
+  {fixedDestination.add(new Option(t('Hong Kong','香港'),'HK'),fixedDestination.options[2]);fixedDestination.value=t('GB','HK');updateDelivery();}
   fixedDestination.addEventListener('change',updateDelivery);
   document.getElementById('fixedForm').addEventListener('submit',async e=>{
    e.preventDefault();const form=e.currentTarget,controls=document.getElementById('fixedControls'),status=document.getElementById('fixedStatus');if(controls.disabled)return;
