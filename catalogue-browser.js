@@ -89,7 +89,27 @@
   const controls=element('section',undefined,'catalogue-filters'); controls.setAttribute('aria-label','Find jewellery');
   const makeSelect=(id,label,options)=>{const wrap=element('label',label);const select=element('select');select.id=id;options.forEach(([value,name])=>{const option=element('option',name);option.value=value;select.append(option);});wrap.append(select);controls.append(wrap);return select;};
   const label=element('label',t('Search pieces','搜尋作品'));const query=element('input');query.type='search';query.id='catalogueQuery';label.append(query);controls.append(label);
-  const collection=makeSelect('collectionFilter',t('Collection','系列'),[['',t('All collections','所有系列')],...(window.VDProducts?.navigationGroups||[]).map(g=>[g.id,t(g.en,g.zh)]),...Object.entries(window.VDProducts?.collections||collections).filter(([key])=>!['silverCollection','petLoverCollection','christmasCollection','keepsakeCollection'].includes(key)).map(([key,value])=>[key,value[zh()?2:0]])]);
+  const registry = window.VDProducts;
+  const groups = registry?.navigationGroups || [];
+  const collection = makeSelect('collectionFilter', t('Collection','系列'), [
+   ['', t('All collections','所有系列')],
+   ...groups.filter(group => group.id !== 'tennis').map(group => [group.id, t(group.en, group.zh)]),
+   ['prismCollection', t('Colour Diamond','彩色鑽石')],
+   ['tennis', t('Tennis','網球珠寶')]
+  ]);
+  // Keep bookmarked collection filters working without listing them in the menu.
+  const supportedCollections = registry?.collections || collections;
+  function selectCollection(value) {
+   for (const option of collection.querySelectorAll('option[hidden]')) option.remove();
+   if (Object.hasOwn(supportedCollections, value) && ![...collection.options].some(option => option.value === value)) {
+    const option = element('option', supportedCollections[value][zh() ? 2 : 0]);
+    option.value = value;
+    option.hidden = true;
+    collection.append(option);
+   }
+   collection.value = value;
+   if (collection.selectedIndex === -1) collection.value = '';
+  }
   const type=makeSelect('typeFilter',t('Jewellery type','珠寶類別'),[['',t('All types','所有類別')],...Object.entries(types).map(([key,value])=>[key,value[zh()?1:0]])]);
   const style=makeSelect('ringStyleFilter',t('Ring style','戒指款式'),[['',t('All ring styles','所有戒指款式')],['solitaire',t('Solitaire','單鑽')],['halo',t('Halo & hidden halo','光環及隱藏光環')],['three',t('Three-stone','三石')],['bands',t('Bands & eternity','戒環及永恆戒指')],['statement',t('Statement & signet','個性及印章戒指')],['other',t('Other ring designs','其他戒指設計')]]);
   const price=makeSelect('priceFilter',t('Displayed price (GBP)','顯示價格（英鎊）'),[['',t('Any price','所有價格')],['200',t('Up to £200','£200 以下')],['1000',t('Up to £1,000','£1,000 以下')],['2500',t('Up to £2,500','£2,500 以下')],['5000',t('Up to £5,000','£5,000 以下')]]);
@@ -113,7 +133,7 @@
   };
   function fromURL() {
    const params=new URLSearchParams(location.search);
-   style.value=params.get('style')||'';query.value=params.get('q') || '';collection.value=params.get('collection') || '';type.value=params.get('type') || '';price.value=params.get('max') || '';sort.value=params.get('sort') || 'default';
+   style.value=params.get('style')||'';query.value=params.get('q') || '';selectCollection(params.get('collection') || '');type.value=params.get('type') || '';price.value=params.get('max') || '';sort.value=params.get('sort') || 'default';
    if(!sort.value)sort.value='default';
   }
   function update(persist=true) {

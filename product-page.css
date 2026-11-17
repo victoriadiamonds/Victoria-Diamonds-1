@@ -40,3 +40,16 @@
 .shipping-assurance{font-size:14px;line-height:1.6;margin:24px 0;padding:16px 0;border-block:1px solid #d5c8b7;color:#625c54}
 
 .natural-shopping .tennis-size-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.tennis-size-option{justify-content:center;min-height:110px}.tennis-size-option .natural-shape-art{display:flex;align-items:center;height:48px;max-width:100%}.tennis-size-option svg{width:100%;height:auto}.natural-shopping button:disabled{opacity:.4;cursor:not-allowed}.natural-shopping button:focus-visible{outline:2px solid #947430;outline-offset:3px}
+
+@media (min-width: 761px) {
+  .product-layout .diamond-options .configuration-choices:has(.stone-width-guide) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 104px), 1fr));
+  }
+
+  .product-layout .diamond-options .configuration-choice:has(.stone-width-guide) .choice-face {
+    height: 100%;
+    min-width: 0;
+    padding-inline: 8px;
+  }
+}
