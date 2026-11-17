@@ -338,7 +338,7 @@ window.DailyProducts = {
     {
       "name": "Luvia Necklace",
       "id": "ds_l_luvia",
-      "image": "products/ds_l_luvia.webp",
+      "image": "products/ds_l_luvia-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -350,13 +350,12 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 1950,
       "designFee": 0,
-      "thumbnail": "products/ds_l_luvia-960.webp",
-      "detailImage": "products/ds_l_luvia-detail.webp"
+      "thumbnail": "products/ds_l_luvia-detail.webp"
     },
     {
       "name": "Virelle Necklace",
       "id": "ds_l_virelle",
-      "image": "products/ds_l_virelle.webp",
+      "image": "products/ds_l_virelle-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -368,13 +367,12 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2575,
       "designFee": 0,
-      "thumbnail": "products/ds_l_virelle-960.webp",
-      "detailImage": "products/ds_l_virelle-detail.webp"
+      "thumbnail": "products/ds_l_virelle-detail.webp"
     },
     {
       "name": "Serenity Necklace",
       "id": "ds_l_serenity",
-      "image": "products/ds_l_serenity.webp",
+      "image": "products/ds_l_serenity-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -391,13 +389,12 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2101,
       "designFee": 0,
-      "thumbnail": "products/ds_l_serenity-960.webp",
-      "detailImage": "products/ds_l_serenity-detail.webp"
+      "thumbnail": "products/ds_l_serenity-detail.webp"
     },
     {
       "name": "Celeste Necklace",
       "id": "ds_m_celeste",
-      "image": "products/ds_m_celeste.webp",
+      "image": "products/ds_m_celeste-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -419,13 +416,12 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 1967,
       "designFee": 0,
-      "thumbnail": "products/ds_m_celeste-960.webp",
-      "detailImage": "products/ds_m_celeste-detail.webp"
+      "thumbnail": "products/ds_m_celeste-detail.webp"
     },
     {
       "name": "Aurora Necklace",
       "id": "ds_m_aurora",
-      "image": "products/ds_m_aurora.webp",
+      "image": "products/ds_m_aurora-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -447,13 +443,12 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2101,
       "designFee": 0,
-      "thumbnail": "products/ds_m_aurora-960.webp",
-      "detailImage": "products/ds_m_aurora-detail.webp"
+      "thumbnail": "products/ds_m_aurora-detail.webp"
     },
     {
       "name": "Solstice Necklace",
       "id": "ds_m_solstice",
-      "image": "products/ds_m_solstice.webp",
+      "image": "products/ds_m_solstice-detail.webp",
       "type": "necklace",
       "diamonds": [
         {
@@ -470,8 +465,7 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2285,
       "designFee": 0,
-      "thumbnail": "products/ds_m_solstice-960.webp",
-      "detailImage": "products/ds_m_solstice-detail.webp"
+      "thumbnail": "products/ds_m_solstice-detail.webp"
     },
     {
       "name": "Luminéa Earrings",

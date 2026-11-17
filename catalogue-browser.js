@@ -110,7 +110,8 @@
    collection.value = value;
    if (collection.selectedIndex === -1) collection.value = '';
   }
-  const type=makeSelect('typeFilter',t('Jewellery type','珠寶類別'),[['',t('All types','所有類別')],...Object.entries(types).map(([key,value])=>[key,value[zh()?1:0]])]);
+  const availableTypes = new Set(products.filter(product => filterProduct(product)).map(product => typeOf(product.category)));
+  const type=makeSelect('typeFilter',t('Jewellery type','珠寶類別'),[['',t('All types','所有類別')],...Object.entries(types).filter(([key])=>availableTypes.has(key)).map(([key,value])=>[key,value[zh()?1:0]])]);
   const style=makeSelect('ringStyleFilter',t('Ring style','戒指款式'),[['',t('All ring styles','所有戒指款式')],['solitaire',t('Solitaire','單鑽')],['halo',t('Halo & hidden halo','光環及隱藏光環')],['three',t('Three-stone','三石')],['bands',t('Bands & eternity','戒環及永恆戒指')],['statement',t('Statement & signet','個性及印章戒指')],['other',t('Other ring designs','其他戒指設計')]]);
   const price=makeSelect('priceFilter',t('Displayed price (GBP)','顯示價格（英鎊）'),[['',t('Any price','所有價格')],['200',t('Up to £200','£200 以下')],['1000',t('Up to £1,000','£1,000 以下')],['2500',t('Up to £2,500','£2,500 以下')],['5000',t('Up to £5,000','£5,000 以下')]]);
   const reset=element('button',t('Clear filters','清除篩選'));reset.type='button';controls.append(reset);
