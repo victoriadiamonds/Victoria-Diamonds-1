@@ -107,3 +107,15 @@
  .mobile-home-refresh>.hero{min-height:0;background:none}
  .mobile-home-refresh>.hero>img{display:none}
 }
+
+/* The Christmas feature follows the collections, above client stories. */
+.seasonal-highlight { margin-inline:auto; }
+@media (min-width:761px) {
+ .promo-slides .bespoke-advantage { grid-template-columns:minmax(0,1fr) minmax(0,40%); }
+ .promo-slides .bespoke-advantage .promo-art img { object-position:center; }
+}
+@media (max-width:760px) {
+ .seasonal-highlight .homepage-promos { display:block; }
+ .seasonal-highlight .promo-slides>section { grid-template-columns:minmax(0,1fr); }
+ .mobile-home-refresh .bespoke-advantage .promo-art img { object-fit:cover; object-position:center; mix-blend-mode:normal; mask-image:none; }
+}

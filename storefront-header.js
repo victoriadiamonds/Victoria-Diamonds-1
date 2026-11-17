@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const details=(title,items)=>{const d=document.createElement('details'),s=document.createElement('summary'),panel=document.createElement('div');d.className='vd-nav-menu';s.textContent=title;panel.className='vd-nav-panel';for(const item of items)panel.append(item);d.append(s,panel);d.addEventListener('toggle',()=>{if(d.open)nav.querySelectorAll('details').forEach(other=>{if(other!==d&&!d.contains(other)&&!other.contains(d))other.open=false;});});return d;};
  function render(){
   nav.replaceChildren();
-  const groups=window.VDProducts?.navigationGroups||[{id:'romance',en:'Romance',zh:'浪漫'},{id:'everyday',en:'Everyday',zh:'日常'},{id:'celebration',en:'Celebration',zh:'慶典'},{id:'men',en:'Men’s jewellery',zh:'男士珠寶'}];
+  const groups=window.VDProducts?.navigationGroups||[{id:'romance',en:'Love and Celebration',zh:'愛與慶典'},{id:'everyday',en:'Everyday',zh:'日常'},{id:'celebration',en:'Celebration',zh:'慶典'},{id:'men',en:'Men’s jewellery',zh:'男士珠寶'}];
   const grouped=groups.filter(group=>group.id!=='tennis').map(group=>link('view-catalogue.html?collection='+group.id,t(group.en,group.zh)));
   const tennis=details(t('Tennis','網球珠寶'),[link('view-catalogue.html?collection=tennis',t('All tennis pieces','所有網球珠寶')),link('view-catalogue.html?collection=tennis&type=Bracelet',t('Tennis bracelets','網球手鏈')),link('view-catalogue.html?collection=tennis&type=Necklace',t('Tennis necklaces','網球項鏈'))]);
   nav.append(details(t('Collections','系列'),[...grouped,link('prism-collection.html',t('Colour Diamond','彩色鑽石')),tennis,link('view-catalogue.html',t('Browse all pieces','瀏覽所有作品'))]));
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    const types=menu.querySelector('[data-mobile-section="types"]')||[...menu.querySelectorAll('details')].find(d=>d.querySelector('a[href*="?type="]'));
    const wrap=node=>{if(menu.tagName==='UL'){const li=document.createElement('li');li.append(node);return li;}return node;};
    const group=(title,key,items)=>{const d=document.createElement('details'),summary=document.createElement('summary');d.className='ux-menu-group';d.dataset.mobileSection=key;summary.textContent=title;d.append(summary,...items);d.open=opened.includes(key);return d;};
-   const groups=window.VDProducts?.navigationGroups||[{id:'romance',en:'Romance',zh:'浪漫'},{id:'everyday',en:'Everyday',zh:'日常'},{id:'celebration',en:'Celebration',zh:'慶典'},{id:'men',en:'Men’s jewellery',zh:'男士珠寶'}];
+   const groups=window.VDProducts?.navigationGroups||[{id:'romance',en:'Love and Celebration',zh:'愛與慶典'},{id:'everyday',en:'Everyday',zh:'日常'},{id:'celebration',en:'Celebration',zh:'慶典'},{id:'men',en:'Men’s jewellery',zh:'男士珠寶'}];
    const tennis=group(t('Tennis','網球珠寶'),'tennis',[
     link('view-catalogue.html?collection=tennis',t('All tennis pieces','所有網球珠寶')),
     link('view-catalogue.html?collection=tennis&type=Bracelet',t('Tennis bracelets','網球手鏈')),

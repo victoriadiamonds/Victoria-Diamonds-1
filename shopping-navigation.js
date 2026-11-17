@@ -14,7 +14,7 @@ window.addEventListener('load',()=>{
  const mobileIntro=document.querySelector('.mobile-home-refresh');
  function positionPieces(){
   if(mobileLanding.matches&&mobileIntro)mobileIntro.prepend(section);
-  else editorial.after(section);
+  else (shortcuts||editorial).before(section);
  }
  positionPieces();
  mobileLanding.addEventListener('change',positionPieces);

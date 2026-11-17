@@ -563,7 +563,7 @@ Object.assign(translations['zh-HK'], {
 
 Object.assign(translations['zh-HK'], {
   "home-hk-51": "彩色鑽石系列",
-  "home-hk-4": "浪漫",
+  "home-hk-4": "愛與慶典",
   "home-hk-5": "日常",
   "home-hk-6": "慶典",
   "home-hk-7": "網球珠寶",

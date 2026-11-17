@@ -2,70 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
  'use strict';
  const t=(en,cn)=>document.documentElement.lang.startsWith('zh')?cn:en;
  const mobilePromos=matchMedia('(max-width:760px)');
- const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
- const promos=document.querySelector('.homepage-promos');
- const slides=promos.querySelector('.promo-slides');
- const christmas=slides.querySelector('.christmas-promo');
+ const slides=document.querySelector('.homepage-promos .promo-slides');
  const usp=document.getElementById('bespoke-advantage');
  const design=document.querySelector('.home-customisation');
- const introduction=usp.querySelector('[data-i18n="home-hk-38"]');
- const benefitDetails=promos.querySelector('.promo-benefits');
- const controls=promos.querySelector('.promo-controls');
- const choices=[...controls.querySelectorAll('[data-promo-slide]')];
- const toggle=controls.querySelector('.promo-toggle');
- let current=0, promoTimer, paused=reduceMotion.matches;
-
- function showSlide(index){
-  current=index;
-  [usp,christmas].forEach((slide,i)=>{slide.inert=i!==index;});
-  choices.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
- }
- function schedulePromo(){
-  clearTimeout(promoTimer);
-  toggle.textContent=paused?t('Play','播放'):t('Pause','暫停');
-  benefitDetails.firstElementChild.textContent=t('About our London atelier','關於我們的倫敦工作室');
-  if(mobilePromos.matches||paused||document.hidden||slides.contains(document.activeElement))return;
-  promoTimer=setTimeout(()=>{showSlide(1-current);schedulePromo();},4000);
- }
- function followPromoLink(){
-  if(location.hash!=='#bespoke-advantage')return;
-  if(mobilePromos.matches){usp.scrollIntoView();return;}
-  paused=true;
-  showSlide(0);
-  usp.scrollIntoView();
-  schedulePromo();
- }
- function positionSellingPoint(){
-  if(mobilePromos.matches){
-   usp.querySelector('.bespoke-advantages').before(introduction);
-   design.before(usp);
-   usp.inert=false;
-   promos.classList.remove('promo-ready');
-  }else{
-   benefitDetails.append(introduction);
-   slides.prepend(usp);
-   showSlide(current);
-   promos.classList.add('promo-ready');
-  }
-  controls.hidden=mobilePromos.matches;
-  followPromoLink();
-  schedulePromo();
- }
- choices.forEach((button,index)=>button.addEventListener('click',()=>{showSlide(index);schedulePromo();}));
- toggle.addEventListener('click',()=>{paused=!paused;schedulePromo();});
- slides.addEventListener('focusin',schedulePromo);
- slides.addEventListener('focusout',()=>setTimeout(schedulePromo,0));
- new MutationObserver(schedulePromo).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
- document.addEventListener('visibilitychange',schedulePromo);
- window.addEventListener('hashchange',followPromoLink);
+ const positionSellingPoint=()=> {
+  if(mobilePromos.matches) design.before(usp);
+  else slides.prepend(usp);
+ };
  mobilePromos.addEventListener('change',positionSellingPoint);
- reduceMotion.addEventListener('change',()=>{paused=reduceMotion.matches;schedulePromo();});
  positionSellingPoint();
- const header=document.querySelector('.site-header');
- new ResizeObserver(()=>document.documentElement.style.setProperty('--landing-header-height',header.offsetHeight+'px')).observe(header);
- const menu=document.querySelector('.collection-menu');
- document.addEventListener('click',event=>{if(!menu.contains(event.target))menu.open=false;});
- menu.addEventListener('keydown',event=>{if(event.key==='Escape'){menu.open=false;menu.querySelector('summary').focus();}});
+
  const mobileCollections=document.createElement('details'); mobileCollections.className='mobile-collections ux-menu-group';
  const collectionSummary=document.createElement('summary');collectionSummary.textContent=t('Shop by collection','按系列選購');mobileCollections.append(collectionSummary);
  document.querySelectorAll('.collection-menu-links > :not([href$="collection=tennis"])').forEach(link=>mobileCollections.append(link.cloneNode(true)));
