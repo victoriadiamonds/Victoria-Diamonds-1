@@ -61,7 +61,7 @@
   const fixedPrice=destination=>{const net=Math.round(p.price*100);return (net+(destination==='GB'?Math.round(net*.20):0))/100;};
   const updateDelivery=()=>{
    document.getElementById('fixedTotal').textContent=money(fixedPrice(fixedDestination.value));
-   document.getElementById('fixedDeliverySummary').textContent=fixedDestination.value==='GB'?t('Includes 20% UK VAT · Free UK delivery','已包括 20% 英國增值稅 · 英國免費送貨'):fixedDestination.value?t('International delivery terms apply.','適用國際送貨條款。'):'';
+   document.getElementById('fixedDeliverySummary').textContent=fixedDestination.value==='GB'?t('Including VAT · Free Insured UK Delivery','已含增值稅 · 英國免費保價送貨'):fixedDestination.value?t('International delivery terms apply.','適用國際送貨條款。'):'';
   };
   updateDelivery();
   fixedDestination.addEventListener('change',updateDelivery);
