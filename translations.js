@@ -34,6 +34,7 @@ const translations = {
         'nav-book-appointment': '預約鑑賞',
         'nav-transparency': '價格',
         'nav-jewelry-care': '珠寶保養',
+        'nav-customisation-process': '珠寶訂製流程',
         'nav-our-guarantee': '我們的保證',
 
         // ===== Hero Section =====
@@ -115,8 +116,6 @@ const translations = {
         'guarantee-3-text': '每只戒指都根據您的確切尺寸單獨打造，確保平衡舒適的佩戴體驗。',
         'guarantee-4-title': '認證卓越品質',
         'guarantee-4-text': '每顆超過1.00克拉的實驗室培育鑽石均附有獨立的IGI證書。',
-        'guarantee-5-title': '一年免費保養與改尺寸',
-        'guarantee-5-text': '於購買後第一年內提供一次免費戒指尺寸調整服務。',
         'guarantee-6-title': '定制作品完整承諾',
         'guarantee-6-text': '定制委託作品為獨一無二之創作並以最終銷售出售，因無法轉作其他用途。',
 
