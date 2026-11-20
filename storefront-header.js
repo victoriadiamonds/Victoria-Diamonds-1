@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   nav.append(details(t('Collections','系列'),[...grouped,link('prism-collection.html',t('Colour Diamond','彩色鑽石')),tennis,link('view-catalogue.html',t('Browse all pieces','瀏覽所有作品'))]));
   nav.append(link('corporate-collaborations.html',t('Corporate gifts','企業禮贈')));
   const guarantee=link('our-guarantee.html',t('Our Guarantee','我們的保證'));
-  nav.append(link('journal-custom-jewellery-design-process.html',t('Customisation Process','珠寶訂製流程')));
+  nav.append(link('customisation-process.html',t('Customisation Process','珠寶訂製流程')));
   nav.append(details(t('Discovery','探索'),[link('journal.html',t('Blogs','網誌')),link('igi-certificate.html',t('IGI Certificate','IGI 證書')),link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,link('artist.html',t('Artist Collaborations','藝術家合作')),link('our-story.html',t('Craftsmanship','工藝'))]));
   nav.append(link('index.html#contact',t('Book appointment','預約'),'vd-book-appointment'));
  }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     link('view-catalogue.html',t('Browse all pieces','瀏覽所有作品'))]);
    const guarantee=link('our-guarantee.html',t('Our Guarantee','我們的保證'));
    const discover=group(t('Discovery','探索'),'discover',[
-    link('journal-custom-jewellery-design-process.html',t('Customisation Process','珠寶訂製流程')),
+    link('customisation-process.html',t('Customisation Process','珠寶訂製流程')),
     link('journal.html',t('Blogs','網誌')),link('igi-certificate.html',t('IGI Certificate','IGI 證書')),
     link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,
     link('artist.html',t('Artist Collaborations','藝術家合作')),

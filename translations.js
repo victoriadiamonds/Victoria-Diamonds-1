@@ -35,6 +35,17 @@ const translations = {
         'nav-transparency': '價格',
         'nav-jewelry-care': '珠寶保養',
         'nav-customisation-process': '珠寶訂製流程',
+        'process-eyebrow': 'Victoria Diamonds · 倫敦珠寶工作室',
+        'process-intro': '由初步構思到完成作品，您的珠寶設計師會與您一對一合作。',
+        'process-wheel': '由設計到交付',
+        'process-design': '設計與報價',
+        'process-production': 'CAD 圖及製作',
+        'process-delivery': '品質檢查及交付',
+        'process-design-copy': '與設計團隊分享您的構思。審閱初步設計，並確認主鑽規格、尺寸及報價。',
+        'process-production-copy': '確認報價並支付訂金後，我們會準備 CAD 圖供您審閱。經您確認後，我們便開始製作。',
+        'process-delivery-copy': '完成後，我們會檢查作品、安排支付餘款，並與您確認送貨或取貨安排。',
+        'process-designer': '聯絡珠寶設計師',
+        'process-guide': '閱讀珠寶訂製指南',
         'nav-our-guarantee': '我們的保證',
 
         // ===== Hero Section =====
