@@ -1,144 +1,346 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-[#232620] text-slate-100">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customisation Process | Victoria Diamonds London</title>
   <meta name="description" content="See how Victoria Diamonds makes bespoke jewellery in London, from your design consultation and CAD approval to final inspection and delivery.">
   <link rel="canonical" href="https://victoria-diamonds.com/customisation-process.html">
-  <link rel="stylesheet" href="victoria-diamonds.css">
-  <link rel="stylesheet" href="storefront-header.css">
-  <link rel="stylesheet" href="desktop-storefront.css?v=20261023launch">
-  <link rel="stylesheet" href="atelier-theme.css?v=20261023newsletter">
-  <style>
-    .process-page { max-width:92rem; margin:auto; padding:clamp(1rem,3vw,3rem); }
-    .explorer { background:#232822; color:#f9f4e9; padding:clamp(1.25rem,4vw,4rem); display:grid; grid-template-areas:"intro" "dial" "details"; align-items:center; }
-    .process-intro {grid-area:intro}
-    .process-intro .text-label,.process-steps .text-label {color:#e4c797}
-    .process-intro h1,.process-steps h2 {color:inherit;line-height:1.04;margin:.65rem 0}
-    .process-intro h1 {font-size:clamp(2.6rem,5vw,5.8rem);letter-spacing:-.045em}
-    .process-intro p,.process-steps p {color:#ede9df;max-width:42ch}
-    .dial {grid-area:dial;position:relative;width:min(100%,42rem);aspect-ratio:1;justify-self:center}
-    .dial svg {display:block;width:100%;height:100%;fill:none;stroke:#ab9876}
-    .dial .arc {stroke:#edcc90;stroke-width:1.2;stroke-dasharray:var(--length,1) 100;transform:rotate(-90deg);transform-origin:center;transition:stroke-dasharray .65s ease}
-    .dial .ticks {stroke:#b6a181;stroke-dasharray:.35 2.65;stroke-width:2}
-    .lens {position:absolute;inset:22%;border-radius:50%;overflow:hidden;background:#ede7db;border:3px double #c6b086}
-    .lens img {width:100%;height:100%;object-fit:cover;display:block}
-    .lens .cad {object-fit:contain;background:#2e2d2b;padding:8%;box-sizing:border-box}
-    .lens img[hidden] {display:none}
-    .dial a {position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;place-items:center;color:#faf5e9;text-decoration:none}
-    .process-number {display:grid;place-items:center;width:clamp(44px,4vw,58px);aspect-ratio:1;border-radius:50%;border:1px solid #b79d71;background:#232822;font:500 .95rem/1 Georgia,serif}
-    .dial a[aria-current] .process-number,.dial a:hover .process-number {background:#e9ce9f;color:#302a1f}
-    .dial a span:last-child {position:absolute;top:100%;width:8em;text-align:center;color:inherit;background:#232822;padding:.18em;font-size:clamp(.78rem,1.1vw,1rem);line-height:1.15}
-    @media(max-width:42rem){.dial a span:last-child{clip-path:inset(50%);width:1px;height:1px;overflow:hidden}.dial{margin:1rem 0}}
-    .stage-details {grid-area:details;border-top:1px solid #726d59;padding-top:1.2rem}
-    .process-steps {margin:0;padding:0;list-style:none}
-    .process-steps h2 {font-size:clamp(1.8rem,3vw,3rem)}
-    .stage-controls {display:flex;gap:1rem;margin-top:1rem}
-    .stage-controls[hidden] {display:none}
-    .stage-controls button {border:1px solid #bba77e;background:transparent;color:inherit;width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.3rem}
-    .stage-controls button:disabled {opacity:.35;cursor:default}
-    .process-actions {padding:2rem 0;display:flex;flex-wrap:wrap;gap:1.3rem;align-items:center}
-    .process-page :is(a,button):focus-visible {outline:3px solid #d99b3d;outline-offset:3px}
-    .process-steps li {scroll-margin-top:8rem}
-    @media(max-width:51.99rem){.site-header{position:relative;top:auto;background:#fbf8f2}.process-page{padding-top:1rem}}
-    @media(min-width:52rem){.explorer{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);grid-template-areas:"dial intro" "dial details";gap:2rem 4%;}.process-intro{align-self:end}.stage-details{align-self:start}}
-    @media(prefers-reduced-motion:no-preference){.lens img,.process-steps li:not([hidden]){animation:resolve .55s ease-out both}@keyframes resolve{from{opacity:.15;transform:translateY(4px)}to{opacity:1;transform:none}}}
-    @media(prefers-reduced-motion:reduce){.dial .arc{transition:none}}
-  </style>
-  <script src="translations.js?v=20261122stages" defer></script>
-  <script src="storefront-header.js?v=20261121customisation" defer></script>
-</head>
-<body>
-  <header class="site-header"><div class="container"><div class="header-inner"><div class="brand-signature"><a href="index.html" class="logo"><span class="brand-victoria">Victoria</span> <span>Diamonds</span></a><span class="brand-diamond-line">Lab-grown &amp; Natural Diamonds</span></div></div></div></header>
-  <main class="process-page">
-    <section class="explorer" aria-label="Explore the customisation process">
-      <div class="process-intro">
-        <p class="text-label" data-i18n="process-eyebrow">Victoria Diamonds · London Atelier</p>
-        <h1 class="heading-display" data-i18n="nav-customisation-process">Customisation Process</h1>
-        <p data-i18n="process-intro">Work one-to-one with your jewellery designer, from the first design concept to the finished piece.</p>
-
-      </div>
-      <nav class="dial" aria-label="Customisation stages">
-        <svg viewBox="0 0 200 200" aria-hidden="true">
-          <circle cx="100" cy="100" r="80"/>
-          <circle class="ticks" cx="100" cy="100" r="74"/>
-          <circle class="arc" cx="100" cy="100" r="80" pathLength="100"/>
-        </svg>
-        <div class="lens" aria-hidden="true">
-          <img data-view="diamonds" src="images/journal-diamond-shapes.webp" alt="">
-          <img hidden data-view="cad" class="cad" src="images/customisation-cad-views.webp" alt="">
-          <img hidden data-view="bench" src="images/bespoke-jewellers-bench.webp" alt="">
-          <img hidden data-view="piece" src="images/products/sl_r_pear_solitaire_tapered-960.webp" alt="">
-        </div>
-        <a href="#design" style="--x:50.00%;--y:10.00%"><span class="process-number" aria-hidden="true">01</span><span data-i18n="process-stage-design">Design</span></a>
-        <a href="#quote" style="--x:78.28%;--y:21.72%"><span class="process-number" aria-hidden="true">02</span><span data-i18n="process-stage-quote">Quote</span></a>
-        <a href="#deposit" style="--x:90.00%;--y:50.00%"><span class="process-number" aria-hidden="true">03</span><span data-i18n="process-stage-deposit">Deposit payment</span></a>
-        <a href="#cad" style="--x:78.28%;--y:78.28%"><span class="process-number" aria-hidden="true">04</span><span data-i18n="process-stage-cad">CAD approval</span></a>
-        <a href="#production" style="--x:50.00%;--y:90.00%"><span class="process-number" aria-hidden="true">05</span><span data-i18n="process-stage-production">Production</span></a>
-        <a href="#quality" style="--x:21.72%;--y:78.28%"><span class="process-number" aria-hidden="true">06</span><span data-i18n="process-stage-quality">Quality check</span></a>
-        <a href="#balance" style="--x:10.00%;--y:50.00%"><span class="process-number" aria-hidden="true">07</span><span data-i18n="process-stage-balance">Remaining payment</span></a>
-        <a href="#delivery" style="--x:21.72%;--y:21.72%"><span class="process-number" aria-hidden="true">08</span><span data-i18n="process-stage-delivery">Delivery</span></a>
-      </nav>
-      <div class="stage-details"><ol class="process-steps" aria-live="polite">
-        <li id="design"><span class="text-label">01 / 08</span><h2 class="heading-display" data-i18n="process-stage-design">Design</h2><p data-i18n="process-stage-design-copy">Share your ideas with your designer and explore diamond shapes, metals and settings.</p></li>
-        <li id="quote"><span class="text-label">02 / 08</span><h2 class="heading-display" data-i18n="process-stage-quote">Quote</h2><p data-i18n="process-stage-quote-copy">Review the design concept, stone specifications, sizing and price before you decide to proceed.</p></li>
-        <li id="deposit"><span class="text-label">03 / 08</span><h2 class="heading-display" data-i18n="process-stage-deposit">Deposit payment</h2><p data-i18n="process-stage-deposit-copy">Approve your quote and pay the agreed deposit so we can prepare your technical drawings.</p></li>
-        <li id="cad"><span class="text-label">04 / 08</span><h2 class="heading-display" data-i18n="process-stage-cad">CAD approval</h2><p data-i18n="process-stage-cad-copy">Review your piece from several angles in its computer-aided design (CAD) drawings. Your approval gives the workshop the go-ahead.</p></li>
-        <li id="production"><span class="text-label">05 / 08</span><h2 class="heading-display" data-i18n="process-stage-production">Production</h2><p data-i18n="process-stage-production-copy">Our jewellers craft your approved design, set the stones and finish the metal.</p></li>
-        <li id="quality"><span class="text-label">06 / 08</span><h2 class="heading-display" data-i18n="process-stage-quality">Quality check</h2><p data-i18n="process-stage-quality-copy">We inspect the finished piece, including the setting and finish, against your approved design.</p></li>
-        <li id="balance"><span class="text-label">07 / 08</span><h2 class="heading-display" data-i18n="process-stage-balance">Remaining payment</h2><p data-i18n="process-stage-balance-copy">Once the piece passes inspection, we arrange any outstanding balance before dispatch or collection.</p></li>
-        <li id="delivery"><span class="text-label">08 / 08</span><h2 class="heading-display" data-i18n="process-stage-delivery">Delivery</h2><p data-i18n="process-stage-delivery-copy">We confirm the delivery details with you and arrange insured shipping or collection.</p></li>
-    </ol>
-      <div class="stage-controls" hidden>
-        <button type="button" aria-label="Previous stage">&#8592;</button>
-        <button type="button" aria-label="Next stage">&#8594;</button>
-      </div></div></section>
-    <div class="process-actions">
-      <a class="btn-primary" href="https://wa.me/447594442577" data-i18n="process-designer">Talk to a jewellery designer</a>
-      <a href="journal-custom-jewellery-design-process.html" data-i18n="process-guide">Read the bespoke design guide</a>
-    </div>
-  </main>
-<script>
-    const dial = document.querySelector('.dial');
-    const links = [...dial.querySelectorAll('a')];
-    const controls = document.querySelector('.stage-controls');
-    const [previous, next] = controls.querySelectorAll('button');
-    controls.hidden = false;
-    function moveStage(offset) {
-      const link = links[Number(dial.dataset.stage) + offset];
-      if (link) {
-        link.click();
-        link.focus({preventScroll:true});
+  
+  <!-- Tailwind CSS -->
+  <script src="assets/customisation/tailwind.js"></script>
+  
+  <!-- Three.js for interactive WebGL 3D render -->
+  <script src="assets/customisation/three.min.js"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond (Serif display) & Montserrat (Clean UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              950: '#232620',
+              900: '#302e29',
+              850: '#393630',
+              800: '#49443b',
+              700: '#605749',
+            },
+            gold: {
+              300: '#f1dfbf',
+              400: '#e3c799',
+              500: '#c6a575',
+              600: '#b39770',
+              700: '#8b7657',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Montserrat', 'system-ui', 'sans-serif'],
+          }
+        }
       }
     }
-    previous.addEventListener('click', () => moveStage(-1));
-    next.addEventListener('click', () => moveStage(1));
-    function showStage() {
-      const stage = Math.max(0, links.findIndex(link => link.hash === location.hash));
-      dial.dataset.stage = stage;
-      previous.disabled = stage === 0;
-      next.disabled = stage === links.length - 1;
-      dial.style.setProperty('--length', stage * 100 / links.length);
-      const view = ['diamonds', 'diamonds', 'diamonds', 'cad', 'bench', 'piece', 'piece', 'piece'][stage];
-      dial.querySelectorAll('[data-view]').forEach(image => {
-        image.hidden = image.dataset.view !== view;
-      });
-      links.forEach((link, index) => {
-        document.querySelector(link.hash).hidden = index !== stage;
-        if (index === stage) link.setAttribute('aria-current', 'step');
-        else link.removeAttribute('aria-current');
-      });
-    }
-    dial.addEventListener('click', event => {
-      const link = event.target.closest('a');
-      if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      if (location.hash !== link.hash) history.pushState(null, '', link.hash);
-      showStage();
-    });
-    window.addEventListener('hashchange', showStage);
-    showStage();
   </script>
+
+  <style>
+    /* Custom Luxury Styling & Bezel Effects */
+    body {
+      background-color: #232620;
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(190, 162, 121, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(54, 50, 44, 0.5) 0%, transparent 50%);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Milled Metallic Gold Loupe Bezel */
+    .loupe-bezel {
+      background: linear-gradient(135deg, #f1dfbf 0%, #b39770 30%, #685021 50%, #c6a575 70%, #8b7657 100%);
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.8),
+        inset 0 2px 4px rgba(255, 255, 255, 0.6),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .loupe-glass-inner {
+      box-shadow: 
+        inset 0 0 30px rgba(0, 0, 0, 0.9),
+        inset 0 0 15px rgba(190, 162, 121, 0.2);
+    }
+
+    /* Lens flare reflection animation */
+    .lens-glare {
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 35%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Glass crosshair reticle line */
+    .reticle-line {
+      background-color: rgba(190, 162, 121, 0.25);
+    }
+
+    /* Custom Scrollbar for Luxury Aesthetics */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #232620;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8b7657;
+      border-radius: 3px;
+    }
+
+    /* Gold shimmer effect on CTAs */
+    .btn-gold-shimmer {
+      background: linear-gradient(110deg, #b39770 0%, #f1dfbf 45%, #c6a575 55%, #8b7657 100%);
+      background-size: 200% 100%;
+      transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-gold-shimmer:hover {
+      background-position: 100% 0;
+      box-shadow: 0 0 20px rgba(190, 162, 121, 0.4);
+      transform: translateY(-1px);
+    }
+
+    /* Active Station Dial Ring Glow */
+    .dial-node {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dial-node.active {
+      box-shadow: 0 0 25px rgba(190, 162, 121, 0.8), 0 0 5px #fff;
+      border-color: #f1dfbf;
+    }
+
+    /* Loupe 10x Magnifier canvas overlay styling */
+    #qcMagnifierCanvas {
+      pointer-events: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 0 3px rgba(190,162,121,0.7);
+    }
+  body {background:#f7f3ed;color:#282828} header,footer {background:#f7f3ed!important;color:#51483f!important} header nav {color:#51483f!important} header nav a:hover {color:#775820!important} .brand-signature{display:flex;flex-direction:column;gap:5px}.brand-signature .logo{color:#1c1c1c;font:400 clamp(20px,2vw,32px)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:.05em;white-space:nowrap}.brand-victoria{color:#b8860b}.brand-diamond-line{font:400 9px/1.3 Arial,sans-serif;letter-spacing:.08em;color:#3a3a3a}main>.text-center :is(h1,p){color:#473c2e}main .lg\:col-span-7 {background:#292b25;border-radius:1.25rem;padding-block:1.5rem}footer {border-color:#c4b5a5} #stage-card-panel{background:#37372f} #roadmap-container>button,#roadmap-container>div{background:#3b3b33} header nav a{color:#574d40!important} header nav a.font-bold{color:#845b20!important} </style>
+<style>
+#stageImageContainer>div{max-width:76%;margin:auto;text-align:center;line-height:1.15}
+#stageImageContainer .vd-inspection-caption{position:absolute;bottom:17%;left:12%;right:12%;line-height:1.2}
+#stageImageContainer .w-32{width:46%;height:auto;aspect-ratio:1}
+#stageImageContainer span.text-lg{font-size:clamp(.8rem,1.15vw,1rem)}
+#loupe-hud-tag{max-width:62%;text-align:center;line-height:1.15}
+</style><style>.cad-reference{height:58%;max-width:69%;object-fit:contain}</style><style>
+.loupe-glass-inner>div:has(>#loupe-hud-tag){top:9%;width:max-content;max-width:54%;font-size:9px;line-height:1.2;padding:3px 7px;letter-spacing:.045em}
+#loupe-hud-tag{max-width:none}
+.cad-reference{max-width:77%;height:77%;width:77%;object-fit:contain;transform:translateY(3%)}
+#stage-interactive-controls .space-y-3>.flex{flex-wrap:wrap;gap:.4rem}
+</style><style>
+#badge3DModel{width:max-content;max-width:none;white-space:nowrap;text-transform:none;letter-spacing:.025em;font:500 8px/1.25 Arial,sans-serif;padding:2px 6px;bottom:8%;background:#25251fdc;color:#eee1c7}
+#stageImageContainer .cad-reference{width:100%;height:100%;max-width:none;transform:none}
+</style></head>
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden text-slate-200 selection:bg-gold-500 selection:text-emerald-950">
+
+  <!-- ================= HEADER / BRANDING ================= -->
+  <header class="sticky top-0 z-40 bg-[#232620]/90 backdrop-blur-md border-b border-gold-600/20 px-4 lg:px-12 py-3 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo Wordmark -->
+      <a href="index.html" class="brand-signature"><span class="logo"><span class="brand-victoria">Victoria</span> Diamonds</span><span class="brand-diamond-line" data-copy="Lab-grown &amp; Natural Diamonds">Lab-grown &amp; Natural Diamonds</span></a>
+
+      <!-- Direct Stage Quick Navigation (Desktop) -->
+      <nav class="hidden xl:flex items-center gap-6 text-xs font-medium tracking-wider text-slate-400">
+        <a href="#design" onclick="event.preventDefault();setStage(0)" class="hover:text-gold-400 transition-colors" id="nav-stage-0">1. Design</a>
+        <a href="#quote" onclick="event.preventDefault();setStage(1)" class="hover:text-gold-400 transition-colors" id="nav-stage-1">2. Quote</a>
+        <a href="#deposit" onclick="event.preventDefault();setStage(2)" class="hover:text-gold-400 transition-colors" id="nav-stage-2">3. Deposit</a>
+        <a href="#cad" onclick="event.preventDefault();setStage(3)" class="hover:text-gold-400 transition-colors" id="nav-stage-3">4. CAD</a>
+        <a href="#production" onclick="event.preventDefault();setStage(4)" class="hover:text-gold-400 transition-colors" id="nav-stage-4">5. Production</a>
+        <a href="#quality" onclick="event.preventDefault();setStage(5)" class="hover:text-gold-400 transition-colors" id="nav-stage-5">6. Quality check</a>
+        <a href="#balance" onclick="event.preventDefault();setStage(6)" class="hover:text-gold-400 transition-colors" id="nav-stage-6">7. Remaining payment</a>
+        <a href="#delivery" onclick="event.preventDefault();setStage(7)" class="hover:text-gold-400 transition-colors" id="nav-stage-7">8. Delivery</a>
+      </nav>
+
+      <!-- Right Header Controls (Language Toggle + WhatsApp CTA) -->
+      <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-emerald-900/80 p-1 rounded-full border border-gold-600/30 text-xs font-semibold">
+          <button id="lang-en-btn" onclick="toggleLanguage('en')" class="px-2.5 py-1 rounded-full bg-gold-500 text-emerald-950 shadow transition-all">EN</button>
+          <button id="lang-zh-btn" onclick="toggleLanguage('zh')" class="px-2.5 py-1 rounded-full text-slate-400 hover:text-gold-400 transition-all">繁中</button>
+        </div>
+
+        <!-- Talk to Jewellery Designer WhatsApp CTA -->
+        <a id="whatsapp-header-btn" href="https://wa.me/447594442577" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-gold-400 hover:text-gold-300 border border-gold-500/40 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-md">
+          <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          <span id="txt-whatsapp-header">Contact our atelier</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 lg:px-8 py-6 flex flex-col justify-center">
+
+    <!-- SUBTITLE BAR -->
+    <div class="text-center mb-6">
+      <p id="txt-[#subtitle]" class="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold-500 font-semibold mb-1">Victoria Diamonds · London Atelier</p>
+      <h1 id="txt-[#title]" class="font-serif text-2xl sm:text-4xl text-slate-100 font-normal tracking-wide">Customisation Process</h1>
+      <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-2"></div>
+    </div>
+
+    <!-- MAIN DUAL SECTION: LEFT LOUPE DIAL + RIGHT INTERACTIVE CARD -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+      <!-- ================= LEFT: 8-STAGE DIAL WITH CENTER LOUPE (7 Cols) ================= -->
+      <div class="lg:col-span-7 flex flex-col items-center justify-center relative select-none">
+        
+        <!-- Dial Outer Layout Wrapper -->
+        <div class="relative w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] flex items-center justify-center">
+          
+          <!-- Outer Circular Track Ring -->
+          <div class="absolute inset-2 sm:inset-4 rounded-full border border-gold-600/20 bg-emerald-950/40 backdrop-blur-sm pointer-events-none"></div>
+          <div class="absolute inset-6 sm:inset-10 rounded-full border border-dashed border-gold-500/15 pointer-events-none"></div>
+
+          <!-- STATIONARY STAGE BUTTONS (8 Nodes orbiting the center) -->
+          <!-- Note: The numbers remain strictly UPRIGHT (non-rotated) while positioned dynamically around the circle -->
+          <div id="dial-nodes-container" class="absolute inset-0">
+            <!-- Programmatically rendered 8 nodes in JS for exact stationary orientation & placement -->
+          </div>
+
+          <!-- Active Indicator Arc Glowing Ring -->
+          <svg class="absolute inset-0 w-full h-full pointer-events-none transform -rotate-90">
+            <circle id="dial-glow-arc" cx="50%" cy="50%" r="44%" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" stroke-dasharray="100 900" stroke-linecap="round" class="transition-all duration-700 ease-out"/>
+            <defs>
+              <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f1dfbf" />
+                <stop offset="50%" stop-color="#c6a575" />
+                <stop offset="100%" stop-color="#8b7657" stop-opacity="0.2" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- ================= CENTERPIECE JEWELLER'S LOUPE ================= -->
+          <div class="relative w-[210px] h-[210px] sm:w-[280px] sm:h-[280px] rounded-full p-2 sm:p-3 loupe-bezel flex items-center justify-center z-10 transition-transform duration-300">
+            
+            <!-- Loupe Inner Frame -->
+            <div class="relative w-full h-full rounded-full bg-emerald-950 overflow-hidden loupe-glass-inner flex items-center justify-center">
+              
+              <!-- WebGL Canvas for 3D Diamond & 3D Ring Render -->
+              <canvas id="loupeCanvas3D" class="w-full h-full absolute inset-0 z-10 cursor-grab active:cursor-grabbing"></canvas>
+
+              <!-- Bench / Stage Imagery Fallback Container -->
+              <div id="stageImageContainer" class="absolute inset-0 z-0 bg-cover bg-center opacity-0 transition-opacity duration-500 flex items-center justify-center">
+                <!-- Dynamic background visuals for non-3D stages -->
+              </div>
+
+              <!-- Glass Lens Optical Reflections Layer -->
+              <div class="absolute inset-0 rounded-full lens-glare z-30 pointer-events-none"></div>
+
+              <!-- Loupe Lens HUD Overlay Badge -->
+              <div class="absolute top-3 left-1/2 -translate-x-1/2 z-30 bg-emerald-950/80 backdrop-blur border border-gold-500/30 px-2.5 py-0.5 rounded-full text-[10px] tracking-widest text-gold-400 font-mono flex items-center gap-1.5 shadow">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+                <span id="loupe-hud-tag">10x LOUPE VIEW</span>
+              </div>
+
+              <!-- CAD Interactive 3D Model Label Badge (Mandatory requirement for Stage 3) -->
+              <div id="badge3DModel" class="hidden absolute bottom-3 left-1/2 -translate-x-1/2 z-30 bg-gold-500/90 text-emerald-950 font-bold px-3 py-0.5 rounded-full text-[9px] tracking-widest uppercase shadow">
+                Illustrative 3D Model
+              </div>
+
+            </div>
+          </div>
+          <!-- ================= END LOUPE ================= -->
+
+        </div>
+
+        <!-- LOUPE UTILITY CONTROLS BAR -->
+        <div class="mt-4 flex items-center justify-center gap-3 z-20">
+          <button onclick="previousStage()" class="p-2 rounded-full bg-emerald-900/80 hover:bg-emerald-800 border border-gold-600/30 text-gold-400 hover:text-gold-300 transition-all shadow" title="Previous Stage (Left Arrow)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          
+          <div class="px-4 py-1.5 rounded-full bg-emerald-900/60 border border-gold-600/30 text-xs font-semibold tracking-widest text-gold-400">
+            <span id="stage-counter-txt">STAGE 1 / 8</span>
+          </div>
+
+          <button onclick="nextStage()" class="p-2 rounded-full bg-emerald-900/80 hover:bg-emerald-800 border border-gold-600/30 text-gold-400 hover:text-gold-300 transition-all shadow" title="Next Stage (Right Arrow)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </div>
+      <!-- ================= END LEFT DIAL ================= -->
+
+      <!-- ================= RIGHT: STAGE DETAIL CARD & ACTIONS (5 Cols) ================= -->
+      <div class="lg:col-span-5 flex flex-col">
+        
+        <div id="stage-card-panel" class="bg-emerald-900/40 backdrop-blur-md border border-gold-600/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden transition-all duration-500">
+          
+          <!-- Subtle Decorative Accent Corner -->
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gold-500/10 via-transparent to-transparent pointer-events-none"></div>
+
+          <!-- Stage Category Badge -->
+          <div class="flex items-center justify-between mb-3">
+            <span id="stage-badge-tag" class="text-[10px] font-bold tracking-[0.25em] text-gold-400 uppercase bg-gold-500/10 border border-gold-500/30 px-3 py-1 rounded-full">
+              STAGE 01 • INITIAL SELECTION
+            </span>
+            <span id="stage-hash-tag" class="text-xs font-mono text-gold-600">#design</span>
+          </div>
+
+          <!-- Stage Heading Title -->
+          <h2 id="stage-title" class="font-serif text-2xl sm:text-3xl text-slate-100 font-medium tracking-wide mb-2">
+            Loose Diamond Inspection
+          </h2>
+
+          <!-- Stage Description Paragraph -->
+          <p id="stage-description" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mb-6 min-h-[70px]">
+            Examine loose diamond shapes under the jeweller's loupe. Compare cut brilliance, ratio, and proportions directly with your dedicated bespoke specialist.
+          </p>
+
+          <!-- STAGE SPECIFIC DYNAMIC CONTROLS PANEL -->
+          <div id="stage-interactive-controls" class="mb-6 p-4 rounded-xl bg-emerald-950/70 border border-gold-600/20">
+            <!-- Populated dynamically via JS per stage -->
+          </div>
+
+          <!-- PRIMARY ACTION BUTTONS -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button id="stage-primary-action" onclick="handlePrimaryAction()" class="flex-1 btn-gold-shimmer text-emerald-950 font-semibold py-3 px-5 rounded-xl text-xs sm:text-sm tracking-wider uppercase shadow-lg flex items-center justify-center gap-2">
+              <span>Continue Process</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 5l7 7-7 7M3 12h18"/></svg>
+            </button>
+            
+            <a id="stage-whatsapp-action" href="https://wa.me/447594442577" target="_blank" rel="noopener" class="px-4 py-3 rounded-xl bg-emerald-900 hover:bg-emerald-800 border border-gold-600/40 text-gold-400 hover:text-gold-300 text-xs font-medium tracking-wide transition-all flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span id="txt-whatsapp-card">Contact our atelier</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- ================= END RIGHT CARD ================= -->
+
+    </div>
+
+    <!-- ================= STAGE SUMMARY ROADMAP STRIP ================= -->
+    <div class="mt-8 pt-6 border-t border-gold-600/20 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+      <!-- Generated via JS for quick status view -->
+      <div id="roadmap-container" class="contents"></div>
+    </div>
+
+  <noscript><ol><li><strong>Design</strong> Share your ideas with your designer and explore diamond shapes, metals and settings.</li><li><strong>Quote</strong> Review the design concept, stone specifications, sizing and price before you decide to proceed.</li><li><strong>Deposit payment</strong> Approve your quote and pay the agreed deposit so we can prepare your technical drawings.</li><li><strong>CAD approval</strong> Review your piece from several angles in its computer-aided design (CAD) drawings. Your approval gives the workshop the go-ahead.</li><li><strong>Production</strong> Our jewellers craft your approved design, set the stones and finish the metal.</li><li><strong>Quality check</strong> We inspect the finished piece, including the setting and finish, against your approved design.</li><li><strong>Remaining payment</strong> Once the piece passes inspection, we arrange any outstanding balance before dispatch or collection.</li><li><strong>Delivery</strong> We confirm the delivery details with you and arrange insured shipping or collection.</li></ol></noscript></main>
+  <dialog id="cad-zoom" aria-label="CAD" style="margin:auto;background:#292822;color:white;padding:12px;border-radius:12px"><form method="dialog" style="text-align:right"><button autofocus>Close</button></form><img style="width:min(82vw,75vh,1024px);height:auto" alt=""></dialog>
+
+    <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-gold-600/20 py-4 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p data-copy="© Victoria Diamonds.">© Victoria Diamonds.</p>
+      <a id="bespoke-guide" href="journal-custom-jewellery-design-process.html">Bespoke design guide</a>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE JAVASCRIPT LOGIC ================= -->
+  <script src="assets/customisation/process.js"></script>
 </body>
 </html>
