@@ -23,14 +23,14 @@
     .dial .arc {stroke:#edcc90;stroke-width:1.2;stroke-dasharray:var(--length,1) 100;transform:rotate(-90deg);transform-origin:center;transition:stroke-dasharray .65s ease}
     .dial .ticks {stroke:#b6a181;stroke-dasharray:.35 2.65;stroke-width:2}
     .lens {position:absolute;inset:22%;border-radius:50%;overflow:hidden;background:#ede7db;border:3px double #c6b086}
-    .lens img,.lens .drawing {width:100%;height:100%;object-fit:cover;display:none}
-    .dial[data-stage="0"] .drawing,.dial[data-stage="1"] .bench,.dial[data-stage="2"] .piece {display:block}
-    .lens .drawing {background:#ede7db;stroke:#705c40;stroke-width:1.4}
-    .dial a {position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;color:#faf5e9;text-decoration:none}
-    .dial a:nth-of-type(1){left:50%;top:10%}.dial a:nth-of-type(2){left:84.64%;top:70%}.dial a:nth-of-type(3){left:15.36%;top:70%}
+    .lens img {width:100%;height:100%;object-fit:cover;display:block}
+    .lens .cad {object-fit:contain;background:#2e2d2b;padding:8%;box-sizing:border-box}
+    .lens img[hidden] {display:none}
+    .dial a {position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;place-items:center;color:#faf5e9;text-decoration:none}
     .process-number {display:grid;place-items:center;width:clamp(44px,4vw,58px);aspect-ratio:1;border-radius:50%;border:1px solid #b79d71;background:#232822;font:500 .95rem/1 Georgia,serif}
     .dial a[aria-current] .process-number,.dial a:hover .process-number {background:#e9ce9f;color:#302a1f}
     .dial a span:last-child {position:absolute;top:100%;width:8em;text-align:center;color:inherit;background:#232822;padding:.18em;font-size:clamp(.78rem,1.1vw,1rem);line-height:1.15}
+    @media(max-width:42rem){.dial a span:last-child{clip-path:inset(50%);width:1px;height:1px;overflow:hidden}.dial{margin:1rem 0}}
     .stage-details {grid-area:details;border-top:1px solid #726d59;padding-top:1.2rem}
     .process-steps {margin:0;padding:0;list-style:none}
     .process-steps h2 {font-size:clamp(1.8rem,3vw,3rem)}
@@ -43,10 +43,10 @@
     .process-steps li {scroll-margin-top:8rem}
     @media(max-width:51.99rem){.site-header{position:relative;top:auto;background:#fbf8f2}.process-page{padding-top:1rem}}
     @media(min-width:52rem){.explorer{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);grid-template-areas:"dial intro" "dial details";gap:2rem 4%;}.process-intro{align-self:end}.stage-details{align-self:start}}
-    @media(prefers-reduced-motion:no-preference){.lens img,.lens .drawing,.process-steps li:not([hidden]){animation:resolve .55s ease-out both}@keyframes resolve{from{opacity:.15;transform:translateY(4px)}to{opacity:1;transform:none}}}
+    @media(prefers-reduced-motion:no-preference){.lens img,.process-steps li:not([hidden]){animation:resolve .55s ease-out both}@keyframes resolve{from{opacity:.15;transform:translateY(4px)}to{opacity:1;transform:none}}}
     @media(prefers-reduced-motion:reduce){.dial .arc{transition:none}}
   </style>
-  <script src="translations.js?v=20261121customisation" defer></script>
+  <script src="translations.js?v=20261122stages" defer></script>
   <script src="storefront-header.js?v=20261121customisation" defer></script>
 </head>
 <body>
@@ -66,21 +66,29 @@
           <circle class="arc" cx="100" cy="100" r="80" pathLength="100"/>
         </svg>
         <div class="lens" aria-hidden="true">
-          <svg class="drawing" viewBox="0 0 160 160">
-            <g opacity=".4" stroke-dasharray="2 3"><path d="M80 12v136M16 64h128M20 106h120"/><circle cx="80" cy="102" r="38"/></g>
-            <ellipse cx="80" cy="100" rx="34" ry="37"/><ellipse cx="80" cy="101" rx="29" ry="31"/>
-            <path d="M55 52l10-13h30l10 13-25 24z M55 52h50 M65 39l15 37 15-37 M68 52l12-13 12 13 M50 69q14-2 19-9 M110 69q-14-2-19-9"/>
-          </svg>
-          <img class="bench" src="images/bespoke-jewellers-bench.webp" alt="">
-          <img class="piece" src="images/products/sl_r_pear_solitaire_tapered-960.webp" alt="">
+          <img data-view="diamonds" src="images/journal-diamond-shapes.webp" alt="">
+          <img hidden data-view="cad" class="cad" src="images/customisation-cad-views.webp" alt="">
+          <img hidden data-view="bench" src="images/bespoke-jewellers-bench.webp" alt="">
+          <img hidden data-view="piece" src="images/products/sl_r_pear_solitaire_tapered-960.webp" alt="">
         </div>
-        <a href="#design"><span class="process-number" aria-hidden="true">01</span><span data-i18n="process-design">Design and quote</span></a>
-          <a href="#production"><span class="process-number" aria-hidden="true">02</span><span data-i18n="process-production">CAD and production</span></a>
-          <a href="#delivery"><span class="process-number" aria-hidden="true">03</span><span data-i18n="process-delivery">Quality check and delivery</span></a>
-        </nav><div class="stage-details"><ol class="process-steps" aria-live="polite">
-      <li id="design"><span class="text-label" aria-hidden="true">01</span><h2 class="heading-display" data-i18n="process-design">Design and quote</h2><p data-i18n="process-design-copy">Share your ideas with our design team. Review the initial concept and confirm your main diamond specifications, sizing and quote.</p></li>
-      <li id="production"><span class="text-label" aria-hidden="true">02</span><h2 class="heading-display" data-i18n="process-production">CAD and production</h2><p data-i18n="process-production-copy">After you approve the quote and place your deposit, we prepare a CAD drawing for your approval. Once you approve it, we start crafting your piece.</p></li>
-      <li id="delivery"><span class="text-label" aria-hidden="true">03</span><h2 class="heading-display" data-i18n="process-delivery">Quality check and delivery</h2><p data-i18n="process-delivery-copy">We inspect the finished piece, arrange any remaining payment and confirm dispatch or collection with you.</p></li>
+        <a href="#design" style="--x:50.00%;--y:10.00%"><span class="process-number" aria-hidden="true">01</span><span data-i18n="process-stage-design">Design</span></a>
+        <a href="#quote" style="--x:78.28%;--y:21.72%"><span class="process-number" aria-hidden="true">02</span><span data-i18n="process-stage-quote">Quote</span></a>
+        <a href="#deposit" style="--x:90.00%;--y:50.00%"><span class="process-number" aria-hidden="true">03</span><span data-i18n="process-stage-deposit">Deposit payment</span></a>
+        <a href="#cad" style="--x:78.28%;--y:78.28%"><span class="process-number" aria-hidden="true">04</span><span data-i18n="process-stage-cad">CAD approval</span></a>
+        <a href="#production" style="--x:50.00%;--y:90.00%"><span class="process-number" aria-hidden="true">05</span><span data-i18n="process-stage-production">Production</span></a>
+        <a href="#quality" style="--x:21.72%;--y:78.28%"><span class="process-number" aria-hidden="true">06</span><span data-i18n="process-stage-quality">Quality check</span></a>
+        <a href="#balance" style="--x:10.00%;--y:50.00%"><span class="process-number" aria-hidden="true">07</span><span data-i18n="process-stage-balance">Remaining payment</span></a>
+        <a href="#delivery" style="--x:21.72%;--y:21.72%"><span class="process-number" aria-hidden="true">08</span><span data-i18n="process-stage-delivery">Delivery</span></a>
+      </nav>
+      <div class="stage-details"><ol class="process-steps" aria-live="polite">
+        <li id="design"><span class="text-label">01 / 08</span><h2 class="heading-display" data-i18n="process-stage-design">Design</h2><p data-i18n="process-stage-design-copy">Share your ideas with your designer and explore diamond shapes, metals and settings.</p></li>
+        <li id="quote"><span class="text-label">02 / 08</span><h2 class="heading-display" data-i18n="process-stage-quote">Quote</h2><p data-i18n="process-stage-quote-copy">Review the design concept, stone specifications, sizing and price before you decide to proceed.</p></li>
+        <li id="deposit"><span class="text-label">03 / 08</span><h2 class="heading-display" data-i18n="process-stage-deposit">Deposit payment</h2><p data-i18n="process-stage-deposit-copy">Approve your quote and pay the agreed deposit so we can prepare your technical drawings.</p></li>
+        <li id="cad"><span class="text-label">04 / 08</span><h2 class="heading-display" data-i18n="process-stage-cad">CAD approval</h2><p data-i18n="process-stage-cad-copy">Review your piece from several angles in its computer-aided design (CAD) drawings. Your approval gives the workshop the go-ahead.</p></li>
+        <li id="production"><span class="text-label">05 / 08</span><h2 class="heading-display" data-i18n="process-stage-production">Production</h2><p data-i18n="process-stage-production-copy">Our jewellers craft your approved design, set the stones and finish the metal.</p></li>
+        <li id="quality"><span class="text-label">06 / 08</span><h2 class="heading-display" data-i18n="process-stage-quality">Quality check</h2><p data-i18n="process-stage-quality-copy">We inspect the finished piece, including the setting and finish, against your approved design.</p></li>
+        <li id="balance"><span class="text-label">07 / 08</span><h2 class="heading-display" data-i18n="process-stage-balance">Remaining payment</h2><p data-i18n="process-stage-balance-copy">Once the piece passes inspection, we arrange any outstanding balance before dispatch or collection.</p></li>
+        <li id="delivery"><span class="text-label">08 / 08</span><h2 class="heading-display" data-i18n="process-stage-delivery">Delivery</h2><p data-i18n="process-stage-delivery-copy">We confirm the delivery details with you and arrange insured shipping or collection.</p></li>
     </ol>
       <div class="stage-controls" hidden>
         <button type="button" aria-label="Previous stage">&#8592;</button>
@@ -111,7 +119,11 @@
       dial.dataset.stage = stage;
       previous.disabled = stage === 0;
       next.disabled = stage === links.length - 1;
-      dial.style.setProperty('--length', [1, 33.33, 66.67][stage]);
+      dial.style.setProperty('--length', stage * 100 / links.length);
+      const view = ['diamonds', 'diamonds', 'diamonds', 'cad', 'bench', 'piece', 'piece', 'piece'][stage];
+      dial.querySelectorAll('[data-view]').forEach(image => {
+        image.hidden = image.dataset.view !== view;
+      });
       links.forEach((link, index) => {
         document.querySelector(link.hash).hidden = index !== stage;
         if (index === stage) link.setAttribute('aria-current', 'step');
