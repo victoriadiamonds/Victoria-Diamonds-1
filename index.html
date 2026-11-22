@@ -175,7 +175,18 @@
 <link rel="stylesheet" href="silver-studio.css?v=20261103prismmobile">
 <link rel="stylesheet" href="shopping-navigation.css?v=20261114mobile">
 <script src="shopping-navigation.js?v=20261117pieces" defer></script>
-<link rel="stylesheet" href="storefront-header.css?v=20261114mobile"><script>document.documentElement.classList.add("vd-header-starting");setTimeout(()=>document.documentElement.classList.remove("vd-header-starting"),3000);</script><link rel="stylesheet" href="mobile-home-refresh.css?v=20261104order"><link rel="stylesheet" href="mobile-home-lens.css?v=20261104"><link rel="stylesheet" href="homepage-priorities.css?v=20261117collection"><script>if(new URLSearchParams(location.search).get('panel')==='guarantee')location.replace('our-guarantee.html'+(new URLSearchParams(location.search).get('lang')==='zh-HK'?'?lang=zh-HK':''));</script></head>
+<link rel="stylesheet" href="storefront-header.css?v=20261114mobile"><script>document.documentElement.classList.add("vd-header-starting");setTimeout(()=>document.documentElement.classList.remove("vd-header-starting"),3000);</script><link rel="stylesheet" href="mobile-home-refresh.css?v=20261104order"><link rel="stylesheet" href="mobile-home-lens.css?v=20261104"><link rel="stylesheet" href="homepage-priorities.css?v=20261117collection"><script>if(new URLSearchParams(location.search).get('panel')==='guarantee')location.replace('our-guarantee.html'+(new URLSearchParams(location.search).get('lang')==='zh-HK'?'?lang=zh-HK':''));</script><style>
+        #bespoke-advantage { display: block; }
+        .campaign-art, .campaign-art img { display: block; width: 100%; height: auto; }
+        @media (min-width: 900px) {
+            html:lang(en) #bespoke-advantage .promo-copy > :not(.btn-primary) {
+                position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden;
+                clip-path: inset(50%); white-space: nowrap;
+            }
+            html:lang(en) #bespoke-advantage .promo-copy { padding: 1rem; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
 <body class="landing-page">
     <div class="progress-bar" id="progressBar"></div>
 
@@ -305,7 +316,7 @@
             <div class="homepage-promos" aria-label="Victoria Diamonds highlights">
                 <div class="promo-slides">
                     <section class="bespoke-advantage" id="bespoke-advantage" aria-labelledby="bespoke-advantage-title">
-                        <div class="promo-art"><img src="images/bespoke-jewellers-bench.webp?v=oval-polishing" width="1024" height="1536" alt="Overhead view of a jeweller polishing a gold oval diamond ring at a wooden workbench" loading="lazy"></div>
+                        <picture class="campaign-art"><source media="(min-width: 900px)" srcset="images/bespoke-campaign.webp"><img src="images/bespoke-campaign-detail.webp" width="908" height="608" alt="Model wearing an oval diamond engagement ring and tennis bracelet" loading="lazy"></picture>
                         <div class="promo-copy">
                             <p class="text-label" data-i18n="home-hk-36">The Victoria Diamonds difference</p>
                             <h2 id="bespoke-advantage-title" class="heading-display" data-i18n="home-hk-37">Bespoke Luxury, Half the Price, Delivered in Half the Time.</h2>
