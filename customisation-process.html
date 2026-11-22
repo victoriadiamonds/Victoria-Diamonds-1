@@ -137,6 +137,14 @@
 </style><style>
 #badge3DModel{width:max-content;max-width:none;white-space:nowrap;text-transform:none;letter-spacing:.025em;font:500 8px/1.25 Arial,sans-serif;padding:2px 6px;bottom:8%;background:#25251fdc;color:#eee1c7}
 #stageImageContainer .cad-reference{width:100%;height:100%;max-width:none;transform:none}
+</style><style>
+.brand-signature .logo{font-size:clamp(17px,4.4vw,30px)}
+header .brand-signature+div{margin-left:auto;white-space:nowrap}
+.lens-stage{width:68%;text-align:center;color:#f1dfbf;padding-top:14px}
+.lens-stage strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(20px,3vw,32px);line-height:1.08}
+.lens-stage span{display:block;color:#e6dccd;font-size:11px;line-height:1.45;margin:7px auto 0}
+.stage-note strong{display:block;color:#e3c799;font-size:.79rem;margin-bottom:.3rem}
+.stage-note p{font-size:.77rem;line-height:1.5;color:#eee6d8}
 </style></head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden text-slate-200 selection:bg-gold-500 selection:text-emerald-950">
 
@@ -146,18 +154,6 @@
       
       <!-- Brand Logo Wordmark -->
       <a href="index.html" class="brand-signature"><span class="logo"><span class="brand-victoria">Victoria</span> Diamonds</span><span class="brand-diamond-line" data-copy="Lab-grown &amp; Natural Diamonds">Lab-grown &amp; Natural Diamonds</span></a>
-
-      <!-- Direct Stage Quick Navigation (Desktop) -->
-      <nav class="hidden xl:flex items-center gap-6 text-xs font-medium tracking-wider text-slate-400">
-        <a href="#design" onclick="event.preventDefault();setStage(0)" class="hover:text-gold-400 transition-colors" id="nav-stage-0">1. Design</a>
-        <a href="#quote" onclick="event.preventDefault();setStage(1)" class="hover:text-gold-400 transition-colors" id="nav-stage-1">2. Quote</a>
-        <a href="#deposit" onclick="event.preventDefault();setStage(2)" class="hover:text-gold-400 transition-colors" id="nav-stage-2">3. Deposit</a>
-        <a href="#cad" onclick="event.preventDefault();setStage(3)" class="hover:text-gold-400 transition-colors" id="nav-stage-3">4. CAD</a>
-        <a href="#production" onclick="event.preventDefault();setStage(4)" class="hover:text-gold-400 transition-colors" id="nav-stage-4">5. Production</a>
-        <a href="#quality" onclick="event.preventDefault();setStage(5)" class="hover:text-gold-400 transition-colors" id="nav-stage-5">6. Quality check</a>
-        <a href="#balance" onclick="event.preventDefault();setStage(6)" class="hover:text-gold-400 transition-colors" id="nav-stage-6">7. Remaining payment</a>
-        <a href="#delivery" onclick="event.preventDefault();setStage(7)" class="hover:text-gold-400 transition-colors" id="nav-stage-7">8. Delivery</a>
-      </nav>
 
       <!-- Right Header Controls (Language Toggle + WhatsApp CTA) -->
       <div class="flex items-center gap-3">
@@ -196,7 +192,7 @@
       <div class="lg:col-span-7 flex flex-col items-center justify-center relative select-none">
         
         <!-- Dial Outer Layout Wrapper -->
-        <div class="relative w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] flex items-center justify-center">
+        <div class="relative w-full max-w-[460px] aspect-square flex items-center justify-center">
           
           <!-- Outer Circular Track Ring -->
           <div class="absolute inset-2 sm:inset-4 rounded-full border border-gold-600/20 bg-emerald-950/40 backdrop-blur-sm pointer-events-none"></div>
@@ -210,7 +206,7 @@
 
           <!-- Active Indicator Arc Glowing Ring -->
           <svg class="absolute inset-0 w-full h-full pointer-events-none transform -rotate-90">
-            <circle id="dial-glow-arc" cx="50%" cy="50%" r="44%" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" stroke-dasharray="100 900" stroke-linecap="round" class="transition-all duration-700 ease-out"/>
+            <circle id="dial-glow-arc" cx="50%" cy="50%" r="44%" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" pathLength="100" stroke-dasharray="0 100"/>
             <defs>
               <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#f1dfbf" />
@@ -285,7 +281,6 @@
             <span id="stage-badge-tag" class="text-[10px] font-bold tracking-[0.25em] text-gold-400 uppercase bg-gold-500/10 border border-gold-500/30 px-3 py-1 rounded-full">
               STAGE 01 • INITIAL SELECTION
             </span>
-            <span id="stage-hash-tag" class="text-xs font-mono text-gold-600">#design</span>
           </div>
 
           <!-- Stage Heading Title -->
@@ -294,7 +289,7 @@
           </h2>
 
           <!-- Stage Description Paragraph -->
-          <p id="stage-description" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mb-6 min-h-[70px]">
+          <p id="stage-description" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mb-5">
             Examine loose diamond shapes under the jeweller's loupe. Compare cut brilliance, ratio, and proportions directly with your dedicated bespoke specialist.
           </p>
 

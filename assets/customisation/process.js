@@ -12,75 +12,91 @@
     "stages": [
       {
         "name": "Design",
-        "title": "Design",
+        "title": "Under the jeweller’s loupe",
         "desc": "Share your ideas with your designer and explore diamond shapes, metals and settings.",
         "hash": "#design",
         "tag": "Stage 01 / 08",
         "hud": "Design",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "Compare cuts",
+        "detail": "Use the shape controls to compare a diamond’s outline and proportions."
       },
       {
         "name": "Quote",
-        "title": "Quote",
+        "title": "Your bespoke quote",
         "desc": "Review the design concept, stone specifications, sizing and price before you decide to proceed.",
         "hash": "#quote",
         "tag": "Stage 02 / 08",
         "hud": "Quote",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "Review your choices",
+        "detail": "Check the stone, metal, sizing and total together before you approve the quote."
       },
       {
         "name": "Deposit payment",
-        "title": "Deposit payment",
+        "title": "Secure your design",
         "desc": "Approve your quote and pay the agreed deposit so we can prepare your technical drawings.",
         "hash": "#deposit",
         "tag": "Stage 03 / 08",
         "hud": "Deposit payment",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "Before CAD begins",
+        "detail": "Your quote sets out the deposit and the balance to be settled later."
       },
       {
         "name": "CAD approval",
-        "title": "CAD approval",
+        "title": "Inspect the design in 3D",
         "desc": "Review your piece from several angles in its computer-aided design (CAD) drawings. Your approval gives the workshop the go-ahead.",
         "hash": "#cad",
         "tag": "Stage 04 / 08",
         "hud": "CAD view",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "",
+        "detail": ""
       },
       {
         "name": "Production",
-        "title": "Production",
+        "title": "At the jeweller’s bench",
         "desc": "Our jewellers craft your approved design, set the stones and finish the metal.",
         "hash": "#production",
         "tag": "Stage 05 / 08",
         "hud": "Production",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "From approved design to finished piece",
+        "detail": "The jeweller forms the setting, secures the stones and polishes the metal."
       },
       {
         "name": "Quality check",
-        "title": "Quality check",
+        "title": "The final inspection",
         "desc": "We inspect the finished piece, including the setting and finish, against your approved design.",
         "hash": "#quality",
         "tag": "Stage 06 / 08",
         "hud": "Quality check",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "Details we check",
+        "detail": "We check the stone settings, finish and details against the design you approved."
       },
       {
         "name": "Remaining payment",
-        "title": "Remaining payment",
+        "title": "Settle the balance",
         "desc": "Once the piece passes inspection, we arrange any outstanding balance before dispatch or collection.",
         "hash": "#balance",
         "tag": "Stage 07 / 08",
         "hud": "Remaining payment",
-        "actionText": "Next stage"
+        "actionText": "Next stage",
+        "note": "Before dispatch or collection",
+        "detail": "We confirm the amount due once your piece has passed its final inspection."
       },
       {
         "name": "Delivery",
-        "title": "Delivery",
+        "title": "Ready for handover",
         "desc": "We confirm the delivery details with you and arrange insured shipping or collection.",
         "hash": "#delivery",
         "tag": "Stage 08 / 08",
         "hud": "Delivery",
-        "actionText": "Contact our atelier"
+        "actionText": "Contact our atelier",
+        "note": "Arrange the handover",
+        "detail": "We confirm insured shipping or collection with you once the balance is settled."
       }
     ]
   },
@@ -93,57 +109,69 @@
     "stages": [
       {
         "name": "設計",
-        "title": "設計",
+        "title": "裸鑽鑑賞",
         "desc": "與設計師分享構思，一同挑選鑽石形狀、金屬及鑲嵌款式。",
         "hash": "#design",
         "tag": "階段 01 / 08",
         "hud": "設計",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "比較切工",
+        "detail": "選擇不同形狀，比較鑽石的輪廓和比例。"
       },
       {
         "name": "報價",
-        "title": "報價",
+        "title": "您的訂製報價",
         "desc": "決定訂製前，先核對設計構思、鑽石規格、尺寸及報價。",
         "hash": "#quote",
         "tag": "階段 02 / 08",
         "hud": "報價",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "核對訂製選項",
+        "detail": "確認報價前，請核對鑽石、金屬、尺寸及總額。"
       },
       {
         "name": "支付訂金",
-        "title": "支付訂金",
+        "title": "確認訂製設計",
         "desc": "確認報價並支付約定訂金後，我們便會準備技術圖。",
         "hash": "#deposit",
         "tag": "階段 03 / 08",
         "hud": "支付訂金",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "製作設計圖前",
+        "detail": "報價列明訂金及稍後應付的餘款。"
       },
       {
         "name": "確認設計圖",
-        "title": "確認設計圖",
+        "title": "立體檢視設計",
         "desc": "從不同角度檢視電腦輔助設計圖（CAD）。您確認後，工坊才會開始製作。",
         "hash": "#cad",
         "tag": "階段 04 / 08",
         "hud": "CAD 檢視",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "",
+        "detail": ""
       },
       {
         "name": "製作",
-        "title": "製作",
+        "title": "珠寶工坊",
         "desc": "珠寶工匠按已確認的設計製作、鑲嵌寶石並打磨金屬。",
         "hash": "#production",
         "tag": "階段 05 / 08",
         "hud": "製作",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "從確認設計到成品",
+        "detail": "工匠製作戒托、鑲嵌寶石並打磨金屬。"
       },
       {
         "name": "品質檢查",
-        "title": "品質檢查",
+        "title": "成品檢查",
         "desc": "我們按您確認的設計檢查成品，包括鑲嵌及打磨細節。",
         "hash": "#quality",
         "tag": "階段 06 / 08",
         "hud": "品質檢查",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "檢查細節",
+        "detail": "我們按您確認的設計檢查鑲嵌、打磨及細節。"
       },
       {
         "name": "支付餘款",
@@ -152,16 +180,20 @@
         "hash": "#balance",
         "tag": "階段 07 / 08",
         "hud": "支付餘款",
-        "actionText": "下一步"
+        "actionText": "下一步",
+        "note": "寄出或取貨前",
+        "detail": "成品通過檢查後，我們會確認應付餘款。"
       },
       {
         "name": "交付",
-        "title": "交付",
+        "title": "準備交付",
         "desc": "我們會與您確認交付詳情，再安排受保運送或取貨。",
         "hash": "#delivery",
         "tag": "階段 08 / 08",
         "hud": "交付",
-        "actionText": "聯絡我們的珠寶工坊"
+        "actionText": "聯絡我們的珠寶工坊",
+        "note": "安排交付",
+        "detail": "餘款付清後，我們會與您確認受保運送或取貨。"
       }
     ]
   }
@@ -343,15 +375,12 @@
       // 3. Update Arc Glow Angle
       const glowArc = document.getElementById('dial-glow-arc');
       if (glowArc) {
-        // Dasharray offset based on 8 stages
-        const offset = 100 - (currentStageIndex * 12.5);
-        glowArc.style.strokeDashoffset = `${offset * 8}`;
+        glowArc.style.strokeDasharray = `${currentStageIndex * 12.5} 100`;
       }
 
       // 4. Update Card Text
       document.getElementById('stage-counter-txt').innerText = `${currentLang==='zh'?'階段':'STAGE'} ${currentStageIndex + 1} / 8`;
       document.getElementById('stage-badge-tag').innerText = stageInfo.tag;
-      document.getElementById('stage-hash-tag').innerText = stageInfo.hash;
       document.getElementById('stage-title').innerText = stageInfo.title;
       document.getElementById('stage-description').innerText = stageInfo.desc;
       document.getElementById('loupe-hud-tag').innerText = currentStageIndex===3 ? (currentLang==='zh'?'CAD 檢視':'CAD view') : stageInfo.hud;
@@ -387,7 +416,19 @@
       badge3D.classList.add('hidden');
 
       const interactiveBox = document.getElementById('stage-interactive-controls');
-      interactiveBox.innerHTML = ''; // Reset controls
+      interactiveBox.innerHTML = '';
+      const stage = i18n[currentLang].stages[currentStageIndex];
+      imgContainer.style.backgroundColor = '';
+      if (stage.note) {
+        const note=document.createElement('div');
+        note.className='stage-note';
+        const heading=document.createElement('strong');
+        heading.textContent=stage.note;
+        const copy=document.createElement('p');
+        copy.textContent=stage.detail;
+        note.append(heading,copy);
+        interactiveBox.append(note);
+      }
 
       switch (currentStageIndex) {
 
@@ -404,7 +445,7 @@
           }
           
           // Build shape switcher controls inside card
-          interactiveBox.innerHTML = `
+          interactiveBox.insertAdjacentHTML('beforeend', `
             <div class="text-xs font-semibold text-gold-400 mb-2">${label("SELECT LOOSE DIAMOND CUT SHAPE:")}</div>
             <div class="grid grid-cols-5 gap-1.5 text-[10px] font-medium text-center">
               <button onclick="changeDiamondShape('pear')" class="p-2 rounded-lg border ${selectedDiamondShape === 'pear' ? 'bg-gold-500 text-emerald-950 font-bold border-gold-300' : 'bg-emerald-900/60 border-gold-600/30 text-slate-300'}">${label("PEAR")}</button>
@@ -414,7 +455,7 @@
               <button onclick="changeDiamondShape('cushion')" class="p-2 rounded-lg border ${selectedDiamondShape === 'cushion' ? 'bg-gold-500 text-emerald-950 font-bold border-gold-300' : 'bg-emerald-900/60 border-gold-600/30 text-slate-300'}">${label("CUSHION")}</button>
             </div>
             
-          `;
+          `);
           break;
 
         // ---------------- STAGE 2: Quote & Deposit (Quiet Text & Price Breakdown) ----------------
@@ -472,12 +513,25 @@
           break;
 
         // ---------------- STAGE 4: Production (Jeweller at Bench Visual) ----------------
-        default: {
+        case 4: {
           const image=new Image();
           image.alt='';
           image.style.cssText='width:100%;height:100%;object-fit:cover';
-          image.src=['','images/journal-diamond-shapes.webp','images/journal-diamond-shapes.webp','','images/bespoke-jewellers-bench.webp','images/products/sl_r_pear_solitaire_tapered-960.webp','images/products/sl_r_pear_solitaire_tapered-960.webp','images/products/sl_r_pear_solitaire_tapered-960.webp'][currentStageIndex];
-          imgContainer.replaceChildren(image);imgContainer.style.opacity='1';break;
+          image.src='images/bespoke-jewellers-bench.webp';
+          imgContainer.replaceChildren(image);
+          imgContainer.style.opacity='1';
+          break;
+        }
+        default: {
+          const panel=document.createElement('div');
+          panel.className='lens-stage';
+          const title=document.createElement('strong');
+          title.textContent=stage.name;
+          const detail=document.createElement('span');
+          detail.textContent=stage.note;
+          panel.append(title,detail);
+          imgContainer.replaceChildren(panel);
+          imgContainer.style.opacity='1';
         }
       }
     }
