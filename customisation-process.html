@@ -13,10 +13,10 @@
   <!-- Three.js for interactive WebGL 3D render -->
   <script src="assets/customisation/three.min.js"></script>
   
-  <!-- Google Fonts: Cormorant Garamond (Serif display) & Montserrat (Clean UI) -->
+  <!-- Google Fonts: Cormorant Garamond (Serif display) & DM Sans (Clean UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <script>
     tailwind.config = {
@@ -40,7 +40,7 @@
           },
           fontFamily: {
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['Montserrat', 'system-ui', 'sans-serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
           }
         }
       }
@@ -54,7 +54,7 @@
       background-image: 
         radial-gradient(circle at 50% 20%, rgba(190, 162, 121, 0.08) 0%, transparent 60%),
         radial-gradient(circle at 80% 80%, rgba(54, 50, 44, 0.5) 0%, transparent 50%);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'DM Sans', sans-serif;
     }
 
     /* Milled Metallic Gold Loupe Bezel */
@@ -122,7 +122,7 @@
       pointer-events: none;
       box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 0 3px rgba(190,162,121,0.7);
     }
-  body {background:#f7f3ed;color:#282828} header,footer {background:#f7f3ed!important;color:#51483f!important} header nav {color:#51483f!important} header nav a:hover {color:#775820!important} .brand-signature{display:flex;flex-direction:column;gap:5px}.brand-signature .logo{color:#1c1c1c;font:400 clamp(20px,2vw,32px)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:.05em;white-space:nowrap}.brand-victoria{color:#b8860b}.brand-diamond-line{font:400 9px/1.3 Arial,sans-serif;letter-spacing:.08em;color:#3a3a3a}main>.text-center :is(h1,p){color:#473c2e}main .lg\:col-span-7 {background:#292b25;border-radius:1.25rem;padding-block:1.5rem}footer {border-color:#c4b5a5} #stage-card-panel{background:#37372f} #roadmap-container>button,#roadmap-container>div{background:#3b3b33} header nav a{color:#574d40!important} header nav a.font-bold{color:#845b20!important} </style>
+  body {background:#f7f3ed;color:#282828} header,footer {background:#f7f3ed!important;color:#51483f!important} header nav {color:#51483f!important} header nav a:hover {color:#775820!important} .brand-signature{display:flex;flex-direction:column;gap:5px}.brand-signature .logo{color:#1c1c1c;font:400 clamp(20px,2vw,32px)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:.05em;white-space:nowrap}.brand-victoria{color:#b8860b}.brand-diamond-line{font:400 9px/1.3 Arial,sans-serif;letter-spacing:.08em;color:#3a3a3a}main>.text-center :is(h1,p){color:#473c2e}.process-visual {padding-block:1.5rem}footer {border-color:#c4b5a5} #roadmap-container>button,#roadmap-container>div{background:#3b3b33} header nav a{color:#574d40!important} header nav a.font-bold{color:#845b20!important} </style>
 <style>
 #stageImageContainer>div{max-width:76%;margin:auto;text-align:center;line-height:1.15}
 #stageImageContainer .vd-inspection-caption{position:absolute;bottom:17%;left:12%;right:12%;line-height:1.2}
@@ -149,6 +149,28 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
 .lens-stage span{display:block;color:#e6dccd;font-size:11px;line-height:1.45;margin:7px auto 0}
 .stage-note strong{display:block;color:#e3c799;font-size:.79rem;margin-bottom:.3rem}
 .stage-note p{font-size:.77rem;line-height:1.5;color:#eee6d8}
+</style><style>
+#stage-card-panel { color:#282822; }
+#stage-title { color:#25241f; }
+#stage-description { color:#514b40;font-weight:400; }
+#stage-badge-tag { color:#70552e;background:transparent;border:0;padding:0;letter-spacing:.08em; }
+#stage-interactive-controls { background:transparent;border:0;border-block:1px solid #cfc1aa;border-radius:0;padding:1rem 0; }
+#stage-interactive-controls :is(strong,.text-gold-400,.text-slate-300) { color:#674d2e; }
+#stage-interactive-controls p { color:#514b40; }
+#stage-interactive-controls button:not(.bg-gold-500) { background:#f7f3ed;color:#554631;border-color:#b9aa90; }
+.stage-action { min-height:44px;padding:.65rem 1rem;border:1px solid #a9987a;border-radius:3px;color:#352d21;font:500 .875rem/1.3 'DM Sans',sans-serif; }
+.stage-action-primary { background:#302c24;color:#fff9ee;border-color:#302c24; }
+.stage-action:hover { border-color:#6d512a; }
+.stage-action-primary:hover { background:#4c3d29; }
+.stage-action:focus-visible { outline:2px solid #80602f;outline-offset:3px; }
+#roadmap-container > button { background:transparent;color:#594f40;border-color:#d9cbb7; }
+#roadmap-container > button.border-gold-500 { background:#ece1d0;color:#352d21;border-color:#9b8055; }
+</style><style>
+.process-visual button, #stage-counter-txt {font-family:'DM Sans',sans-serif}
+.process-visual button {color:#604824;background:#f7f3ed;border-color:#b6a284;box-shadow:none}
+.process-visual button:hover {color:#3e2d16;background:#ede2d1}
+.process-visual .dial-node.active {color:#30251a;background:#dbc39b;border-color:#927044;box-shadow:0 0 0 3px #f7f3ed}
+#stage-counter-txt {color:#654b29;letter-spacing:.04em}
 </style></head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden text-slate-200 selection:bg-gold-500 selection:text-emerald-950">
 
@@ -193,13 +215,13 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
       <!-- ================= LEFT: 8-STAGE DIAL WITH CENTER LOUPE (7 Cols) ================= -->
-      <div class="lg:col-span-7 flex flex-col items-center justify-center relative select-none">
+      <div class="process-visual lg:col-span-7 flex flex-col items-center justify-center relative select-none">
         
         <!-- Dial Outer Layout Wrapper -->
         <div class="relative w-full max-w-[460px] aspect-square flex items-center justify-center">
           
           <!-- Outer Circular Track Ring -->
-          <div class="absolute inset-2 sm:inset-4 rounded-full border border-gold-600/20 bg-emerald-950/40 backdrop-blur-sm pointer-events-none"></div>
+          <div class="absolute inset-2 sm:inset-4 rounded-full border border-gold-600/20 pointer-events-none"></div>
           <div class="absolute inset-6 sm:inset-10 rounded-full border border-dashed border-gold-500/15 pointer-events-none"></div>
 
           <!-- STATIONARY STAGE BUTTONS (8 Nodes orbiting the center) -->
@@ -213,8 +235,8 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
             <circle id="dial-glow-arc" cx="50%" cy="50%" r="44%" fill="none" stroke="url(#goldGradient)" stroke-width="2.5" pathLength="100" stroke-dasharray="0 100"/>
             <defs>
               <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f1dfbf" />
-                <stop offset="50%" stop-color="#c6a575" />
+                <stop offset="0%" stop-color="#a27942" />
+                <stop offset="50%" stop-color="#8d642e" />
                 <stop offset="100%" stop-color="#8b7657" stop-opacity="0.2" />
               </linearGradient>
             </defs>
@@ -260,7 +282,7 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
           </button>
           
-          <div class="px-4 py-1.5 rounded-full bg-emerald-900/60 border border-gold-600/30 text-xs font-semibold tracking-widest text-gold-400">
+          <div class="px-4 py-1.5 text-xs font-semibold tracking-widest">
             <span id="stage-counter-txt">STAGE 1 / 8</span>
           </div>
 
@@ -275,7 +297,7 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
       <!-- ================= RIGHT: STAGE DETAIL CARD & ACTIONS (5 Cols) ================= -->
       <div class="lg:col-span-5 flex flex-col">
         
-        <div id="stage-card-panel" class="bg-emerald-900/40 backdrop-blur-md border border-gold-600/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden transition-all duration-500">
+        <div id="stage-card-panel" class="relative min-w-0">
           
           <!-- Subtle Decorative Accent Corner -->
           <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gold-500/10 via-transparent to-transparent pointer-events-none"></div>
@@ -304,12 +326,12 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
 
           <!-- PRIMARY ACTION BUTTONS -->
           <div class="flex flex-col sm:flex-row gap-3">
-            <button id="stage-primary-action" onclick="handlePrimaryAction()" class="flex-1 btn-gold-shimmer text-emerald-950 font-semibold py-3 px-5 rounded-xl text-xs sm:text-sm tracking-wider uppercase shadow-lg flex items-center justify-center gap-2">
+            <button id="stage-primary-action" onclick="handlePrimaryAction()" class="stage-action stage-action-primary flex items-center justify-center gap-2">
               <span>Continue Process</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 5l7 7-7 7M3 12h18"/></svg>
             </button>
             
-            <a id="stage-whatsapp-action" href="https://wa.me/447594442577" target="_blank" rel="noopener" class="px-4 py-3 rounded-xl bg-emerald-900 hover:bg-emerald-800 border border-gold-600/40 text-gold-400 hover:text-gold-300 text-xs font-medium tracking-wide transition-all flex items-center justify-center gap-2">
+            <a id="stage-whatsapp-action" href="https://wa.me/447594442577" target="_blank" rel="noopener" class="stage-action flex items-center justify-center gap-2">
               <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
               <span id="txt-whatsapp-card">Contact our atelier</span>
             </a>
