@@ -140,6 +140,10 @@
 </style><style>
 .brand-signature .logo{font-size:clamp(17px,4.4vw,30px)}
 header .brand-signature+div{margin-left:auto;white-space:nowrap}
+#dial-glow-arc { filter: drop-shadow(0 0 3px #e3bc7d80); }
+@media (prefers-reduced-motion: no-preference) {
+  #dial-glow-arc { transition: stroke-dasharray 720ms cubic-bezier(.22,.72,.24,1); }
+}
 .lens-stage{width:68%;text-align:center;color:#f1dfbf;padding-top:14px}
 .lens-stage strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(20px,3vw,32px);line-height:1.08}
 .lens-stage span{display:block;color:#e6dccd;font-size:11px;line-height:1.45;margin:7px auto 0}
