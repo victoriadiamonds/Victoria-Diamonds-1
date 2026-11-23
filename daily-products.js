@@ -463,7 +463,7 @@ window.DailyProducts = {
         }
       ],
       "braceletMetalTier": null,
-      "price": 2285,
+      "price": 3012,
       "designFee": 0,
       "thumbnail": "products/ds_m_solstice-studio-chain.webp"
     },
