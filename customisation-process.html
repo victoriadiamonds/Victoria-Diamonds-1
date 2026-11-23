@@ -171,7 +171,16 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
 .process-visual button:hover {color:#3e2d16;background:#ede2d1}
 .process-visual .dial-node.active {color:#30251a;background:#dbc39b;border-color:#927044;box-shadow:0 0 0 3px #f7f3ed}
 #stage-counter-txt {color:#654b29;letter-spacing:.04em}
-</style></head>
+</style><style>
+    .process-language {
+      appearance:none; min-height:44px; min-width:76px; padding:0 30px 0 12px;
+      border:1px solid #a27b32; border-radius:0; color:#29251f;
+      background:#f5f1e9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2329251f' stroke-width='1.5'/%3E%3C/svg%3E") right 9px center / 16px no-repeat;
+      font:inherit; font-size:14px; cursor:pointer;
+    }
+    .process-language:focus-visible { outline:2px solid #a27b32; outline-offset:2px; }
+  </style>
+</head>
 <body class="min-h-screen flex flex-col justify-between overflow-x-hidden text-slate-200 selection:bg-gold-500 selection:text-emerald-950">
 
   <!-- ================= HEADER / BRANDING ================= -->
@@ -184,10 +193,10 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
       <!-- Right Header Controls (Language Toggle + WhatsApp CTA) -->
       <div class="flex items-center gap-3">
         <!-- Language Switcher -->
-        <div class="flex items-center bg-emerald-900/80 p-1 rounded-full border border-gold-600/30 text-xs font-semibold">
-          <button id="lang-en-btn" onclick="toggleLanguage('en')" class="px-2.5 py-1 rounded-full bg-gold-500 text-emerald-950 shadow transition-all">EN</button>
-          <button id="lang-zh-btn" onclick="toggleLanguage('zh')" class="px-2.5 py-1 rounded-full text-slate-400 hover:text-gold-400 transition-all">繁中</button>
-        </div>
+        <select id="process-language" aria-label="Language / Traditional Chinese" class="process-language">
+          <option value="en">EN</option>
+          <option value="zh">&#32321;&#20013;</option>
+        </select>
 
         <!-- Talk to Jewellery Designer WhatsApp CTA -->
         <a id="whatsapp-header-btn" href="https://wa.me/447594442577" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-gold-400 hover:text-gold-300 border border-gold-500/40 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all shadow-md">
@@ -362,6 +371,6 @@ header .brand-signature+div{margin-left:auto;white-space:nowrap}
   </footer>
 
   <!-- ================= INTERACTIVE JAVASCRIPT LOGIC ================= -->
-  <script src="assets/customisation/process.js"></script>
+  <script src="assets/customisation/process.js?v=20261123locale"></script>
 </body>
 </html>

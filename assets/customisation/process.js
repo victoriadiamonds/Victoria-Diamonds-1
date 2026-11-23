@@ -779,20 +779,13 @@
     /* ==========================================================================
        10. 2D VECTOR CAD BLUEPRINT CANVAS RENDERER
        ========================================================================== */
+    document.getElementById('process-language').addEventListener('change', event => {
+      toggleLanguage(event.currentTarget.value);
+    });
+
     function toggleLanguage(lang) {
       currentLang = lang;
       
-      const enBtn = document.getElementById('lang-en-btn');
-      const zhBtn = document.getElementById('lang-zh-btn');
-
-      if (lang === 'zh') {
-        zhBtn.className = 'px-2.5 py-1 rounded-full bg-gold-500 text-emerald-950 shadow transition-all';
-        enBtn.className = 'px-2.5 py-1 rounded-full text-slate-400 hover:text-gold-400 transition-all';
-      } else {
-        enBtn.className = 'px-2.5 py-1 rounded-full bg-gold-500 text-emerald-950 shadow transition-all';
-        zhBtn.className = 'px-2.5 py-1 rounded-full text-slate-400 hover:text-gold-400 transition-all';
-      }
-
       document.getElementById('txt-[#subtitle]').innerText = i18n[lang].subtitle;
       document.getElementById('txt-[#title]').innerText = i18n[lang].title;
       document.getElementById('txt-whatsapp-header').innerText = i18n[lang].whatsappHeader;
