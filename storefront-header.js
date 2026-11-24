@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   nav.append(link('corporate-collaborations.html',t('Corporate gifts','企業禮贈')));
   const guarantee=link('our-guarantee.html',t('Our Guarantee','我們的保證'));
   nav.append(link('customisation-process.html',t('Customisation Process','珠寶訂製流程')));
-  nav.append(details(t('Discovery','探索'),[link('journal.html',t('Blogs','網誌')),link('igi-certificate.html',t('IGI Certificate','IGI 證書')),link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,link('artist.html',t('Artist Collaborations','藝術家合作')),link('our-story.html',t('Craftsmanship','工藝'))]));
+  nav.append(details(t('Discovery','探索'),[link('journal.html',t('Blogs','網誌')),link('igi-certificate.html',t('IGI Certificate','IGI 證書')),link('repairs-maintenance.html',t('Repairs & Maintenance','維修及保養')),link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,link('artist.html',t('Artist Collaborations','藝術家合作')),link('our-story.html',t('Craftsmanship','工藝'))]));
   nav.append(link('index.html#contact',t('Book appointment','預約'),'vd-book-appointment'));
  }
  render();row.append(nav);
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    const discover=group(t('Discovery','探索'),'discover',[
     link('customisation-process.html',t('Customisation Process','珠寶訂製流程')),
     link('journal.html',t('Blogs','網誌')),link('igi-certificate.html',t('IGI Certificate','IGI 證書')),
-    link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,
+    link('repairs-maintenance.html',t('Repairs & Maintenance','維修及保養')),link('jewellery-care.html',t('Jewellery care','珠寶保養')),guarantee,
     link('artist.html',t('Artist Collaborations','藝術家合作')),
     link('our-story.html',t('Craftsmanship','工藝'))]);
    discover.classList.add('vd-mobile-info');
