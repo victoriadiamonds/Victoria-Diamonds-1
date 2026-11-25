@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   function choose(carat){let stone=rules.select(data.items,selectedShape,carat,p.preset.stoneCount?Number(carat)*p.preset.stoneCount:total);if(!stone)stone=sizes.map(c=>rules.select(data.items,selectedShape,c,p.preset.stoneCount?c*p.preset.stoneCount:total)).find(Boolean);groups=stone?[stone]:[];renderTennis();quote();}
  }
  function render(){
+  if(p.preset?.fixedGraduated){
+   panel.replaceChildren(node('h2','',t('Fixed natural diamond arrangement','固定天然鑽石配置')),node('p','natural-current',groups.map(g=>g.qty+' × '+g.carat+' ct · '+g.colour+' / '+g.clarity).join(' | ')));return;
+  }
   if(p.collection==='tennisCollection'&&window.VDTennisNatural){const total=window.VDTennisNatural.totalCarat(p,record),stone=window.VDTennisNatural.select(data.items,selectedShape,groups[0]?.carat,p.preset.stoneCount?Number(groups[0]?.carat)*p.preset.stoneCount:total);groups=stone?[stone]:[];renderTennis();return;}
   panel.replaceChildren();panel.append(node('p','eyebrow',t('NATURAL DIAMOND SELECTION','天然鑽石選擇')),node('h2','',t('Select shape, size and grades.','選擇形狀、大小及級別。')),node('p','natural-intro',t('Begin with a priced combination below. Change the grades to compare options; select a result to update your piece. Photographs show the original design, not the selected natural diamond.','從以下已定價組合開始，調整級別並選擇結果以更新您的珠寶。圖片為原始設計，並非所選天然鑽石。')));
   // Only the main stone is customer-selectable; the remaining natural groups stay in the quote.

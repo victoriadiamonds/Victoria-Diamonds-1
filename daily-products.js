@@ -178,7 +178,7 @@ window.DailyProducts = {
       "thumbnail": "products/ds_s_solenne-studio-20261027-960.webp"
     },
     {
-      "name": "Élan Ring",
+      "name": "Ã‰lan Ring",
       "id": "ds_s_elan",
       "image": "products/ds_s_elan-studio-20261027.webp",
       "type": "ring",
@@ -350,7 +350,8 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 1950,
       "designFee": 0,
-      "thumbnail": "products/ds_l_luvia-studio-chain.webp"
+      "thumbnail": "products/ds_l_luvia-studio-chain.webp",
+      "pendantOnly": true
     },
     {
       "name": "Virelle Necklace",
@@ -367,7 +368,8 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2575,
       "designFee": 0,
-      "thumbnail": "products/ds_l_virelle-studio-chain.webp"
+      "thumbnail": "products/ds_l_virelle-studio-chain.webp",
+      "pendantOnly": true
     },
     {
       "name": "Serenity Necklace",
@@ -389,7 +391,8 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2101,
       "designFee": 0,
-      "thumbnail": "products/ds_l_serenity-studio-chain.webp"
+      "thumbnail": "products/ds_l_serenity-studio-chain.webp",
+      "pendantOnly": true
     },
     {
       "name": "Celeste Necklace",
@@ -404,19 +407,27 @@ window.DailyProducts = {
         },
         {
           "quality": "select",
-          "carat": "0.1",
-          "qty": 4
+          "carat": "0.75",
+          "qty": 2
         },
         {
           "quality": "select",
-          "carat": "0.05",
+          "carat": "0.50",
+          "qty": 2
+        },
+        {
+          "quality": "select",
+          "carat": "0.25",
           "qty": 4
         }
       ],
       "braceletMetalTier": null,
-      "price": 1967,
+      "price": 3703.2,
       "designFee": 0,
-      "thumbnail": "products/ds_m_celeste-studio-chain.webp"
+      "thumbnail": "products/ds_m_celeste-studio-chain.webp",
+      "pendantOnly": true,
+      "lockDiamonds": true,
+      "fixedGraduated": true
     },
     {
       "name": "Aurora Necklace",
@@ -443,7 +454,8 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 2101,
       "designFee": 0,
-      "thumbnail": "products/ds_m_aurora-studio-chain.webp"
+      "thumbnail": "products/ds_m_aurora-studio-chain.webp",
+      "pendantOnly": true
     },
     {
       "name": "Solstice Necklace",
@@ -465,10 +477,11 @@ window.DailyProducts = {
       "braceletMetalTier": null,
       "price": 3012,
       "designFee": 0,
-      "thumbnail": "products/ds_m_solstice-studio-chain.webp"
+      "thumbnail": "products/ds_m_solstice-studio-chain.webp",
+      "pendantOnly": true
     },
     {
-      "name": "Luminéa Earrings",
+      "name": "LuminÃ©a Earrings",
       "id": "ds_s_luminea",
       "soldAsPair": true,
       "image": "products/ds_s_luminea-studio-20261027.webp",
@@ -530,7 +543,7 @@ window.DailyProducts = {
       "thumbnail": "products/ds_s_martini-studio-20261027-960.webp"
     },
     {
-      "name": "Auréa Bracelet",
+      "name": "AurÃ©a Bracelet",
       "id": "ds_m_aurea_bracelet",
       "image": "products/ds_m_aurea_bracelet-studio-20261027.webp",
       "type": "bracelet",
@@ -630,7 +643,7 @@ window.DailyProducts = {
       "needsStoneSelection": false
     },
     {
-      "name": "Lumière Bracelet",
+      "name": "LumiÃ¨re Bracelet",
       "id": "ds_m_lumiere_bracelet",
       "image": "products/ds_m_lumiere_bracelet-studio-20261027.webp",
       "type": "bracelet",

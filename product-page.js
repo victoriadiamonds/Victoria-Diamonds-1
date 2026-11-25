@@ -51,6 +51,7 @@
   gallery.querySelector('p').textContent=t('Select a view, then open the photograph in full. The complete-chain view is reconstructed; the detail view retains the original design photograph.','選擇視圖後可開啟完整照片。完整鏈條視圖經重構；細節視圖保留原始設計照片。');
  }
  if(p.mode==='custom'){const price=document.createElement('p');price.className='product-price';price.id='productQuote';price.setAttribute('aria-live','polite');price.textContent=t('Confirming price…','正在確認價格…');document.querySelector('.product-intro').append(price);}
+ if(p.preset?.pendantOnly){const note=document.createElement('p');note.textContent=t('Pendant only. Chain available separately on enquiry.','只包括吊墜。頸鏈可另行查詢訂購。');document.querySelector('.product-intro').append(note);}
  const host=document.getElementById('productCheckout');
  if(p.mode==='custom'){window.VDCheckout.mount(p.preset);}
  else if(p.mode==='enquiry'){host.innerHTML=`<h2>${t('Available by appointment','僅限預約訂購')}</h2><p>${t('This piece cannot be purchased online. Book an appointment to discuss the design, specifications and price with our atelier.','此作品不提供網上購買。請預約與工作室討論設計、規格及價格。')}</p><a class="enquiry-button" href="https://calendly.com/general-victoria-diamonds/30min?utm_content=${encodeURIComponent(p.id)}" target="_blank" rel="noopener">${t('Book an appointment','預約諮詢')}</a>`;}
