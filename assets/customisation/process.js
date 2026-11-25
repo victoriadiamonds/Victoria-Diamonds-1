@@ -13,7 +13,7 @@
       {
         "name": "Design",
         "title": "Under the jeweller’s loupe",
-        "desc": "Share your ideas with your designer and explore diamond shapes, metals and settings.",
+        "desc": "Confirm your centre stone specifications, ring size and initial 2D design with your designer.",
         "hash": "#design",
         "tag": "Stage 01 / 08",
         "hud": "Design",
@@ -24,7 +24,7 @@
       {
         "name": "Quote",
         "title": "Your bespoke quote",
-        "desc": "Review the design concept, stone specifications, sizing and price before you decide to proceed.",
+        "desc": "Approve the design, dimensions, stones and all-inclusive quote in writing before paying your deposit.",
         "hash": "#quote",
         "tag": "Stage 02 / 08",
         "hud": "Quote",
@@ -35,7 +35,7 @@
       {
         "name": "Deposit payment",
         "title": "Secure your design",
-        "desc": "Approve your quote and pay the agreed deposit so we can prepare your technical drawings.",
+        "desc": "The non-refundable 50% deposit reserves your exact diamond and starts CAD modelling that day.",
         "hash": "#deposit",
         "tag": "Stage 03 / 08",
         "hud": "Deposit payment",
@@ -46,7 +46,7 @@
       {
         "name": "CAD approval",
         "title": "Inspect the design in 3D",
-        "desc": "Review your piece from several angles in its computer-aided design (CAD) drawings. Your approval gives the workshop the go-ahead.",
+        "desc": "Review multiple CAD rounds and the official IGI report for your reserved diamond. Approve the final design before crafting and verify the stone before setting.",
         "hash": "#cad",
         "tag": "Stage 04 / 08",
         "hud": "CAD view",
@@ -78,25 +78,25 @@
       },
       {
         "name": "Remaining payment",
-        "title": "Settle the balance",
-        "desc": "Once the piece passes inspection, we arrange any outstanding balance before dispatch or collection.",
+        "title": "Arrange your handover",
+        "desc": "After inspection, we confirm the remaining 50% and arrange an in-person handover.",
         "hash": "#balance",
         "tag": "Stage 07 / 08",
         "hud": "Remaining payment",
         "actionText": "Next stage",
-        "note": "Before dispatch or collection",
+        "note": "Final 50%",
         "detail": "We confirm the amount due once your piece has passed its final inspection."
       },
       {
         "name": "Delivery",
         "title": "Ready for handover",
-        "desc": "We confirm the delivery details with you and arrange insured shipping or collection.",
+        "desc": "Pay the final 50% when the finished ring is physically handed to you. Delivery and full transit insurance through handover are included.",
         "hash": "#delivery",
         "tag": "Stage 08 / 08",
         "hud": "Delivery",
         "actionText": "Contact our atelier",
         "note": "Arrange the handover",
-        "detail": "We confirm insured shipping or collection with you once the balance is settled."
+        "detail": "Pay the final 50% when the finished ring is physically handed to you. Delivery and full transit insurance through handover are included."
       }
     ]
   },
@@ -110,7 +110,7 @@
       {
         "name": "設計",
         "title": "裸鑽鑑賞",
-        "desc": "與設計師分享構思，一同挑選鑽石形狀、金屬及鑲嵌款式。",
+        "desc": "與設計師確認主石規格、戒圍及初步平面設計。",
         "hash": "#design",
         "tag": "階段 01 / 08",
         "hud": "設計",
@@ -121,7 +121,7 @@
       {
         "name": "報價",
         "title": "您的訂製報價",
-        "desc": "決定訂製前，先核對設計構思、鑽石規格、尺寸及報價。",
+        "desc": "支付訂金前，請書面確認設計、尺寸、寶石及全包報價。",
         "hash": "#quote",
         "tag": "階段 02 / 08",
         "hud": "報價",
@@ -132,7 +132,7 @@
       {
         "name": "支付訂金",
         "title": "確認訂製設計",
-        "desc": "確認報價並支付約定訂金後，我們便會準備技術圖。",
+        "desc": "支付不可退還的 50% 訂金後，我們會即日預留鑽石並開始 CAD 建模。",
         "hash": "#deposit",
         "tag": "階段 03 / 08",
         "hud": "支付訂金",
@@ -143,7 +143,7 @@
       {
         "name": "確認設計圖",
         "title": "立體檢視設計",
-        "desc": "從不同角度檢視電腦輔助設計圖（CAD）。您確認後，工坊才會開始製作。",
+        "desc": "審閱多輪 CAD 圖及所選鑽石的正式 IGI 報告。確認最終設計才開始製作，並於鑲嵌前核對寶石。",
         "hash": "#cad",
         "tag": "階段 04 / 08",
         "hud": "CAD 檢視",
@@ -175,25 +175,25 @@
       },
       {
         "name": "支付餘款",
-        "title": "支付餘款",
-        "desc": "成品通過檢查後，我們會在寄出或取貨前安排支付餘款。",
+        "title": "安排交收",
+        "desc": "檢查完成後，我們會確認餘下 50% 款項及安排當面交收。",
         "hash": "#balance",
         "tag": "階段 07 / 08",
         "hud": "支付餘款",
         "actionText": "下一步",
-        "note": "寄出或取貨前",
+        "note": "餘款 50%",
         "detail": "成品通過檢查後，我們會確認應付餘款。"
       },
       {
         "name": "交付",
         "title": "準備交付",
-        "desc": "我們會與您確認交付詳情，再安排受保運送或取貨。",
+        "desc": "當面交收成品時支付餘下 50%。報價包括交收前的運送及全額運送保險。",
         "hash": "#delivery",
         "tag": "階段 08 / 08",
         "hud": "交付",
         "actionText": "聯絡我們的珠寶工坊",
         "note": "安排交付",
-        "detail": "餘款付清後，我們會與您確認受保運送或取貨。"
+        "detail": "當面交收成品時支付餘下 50%。報價包括交收前的運送及全額運送保險。"
       }
     ]
   }
@@ -517,7 +517,7 @@
           const image=new Image();
           image.alt='';
           image.style.cssText='width:100%;height:100%;object-fit:cover';
-          image.src='images/bespoke-jewellers-bench.webp';
+          image.src='images/bespoke-hand-setting.webp';
           imgContainer.replaceChildren(image);
           imgContainer.style.opacity='1';
           break;

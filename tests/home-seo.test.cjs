@@ -7,11 +7,9 @@ test('homepage metadata, heading and local business data are consistent',()=>{
  const schema=JSON.parse(html.match(/<script type="application\/ld\+json" id="atelierSchema">([\s\S]*?)<\/script>/)[1]);
  assert.equal(schema['@type'],'JewelryStore');assert.equal(schema.address.streetAddress,'59 Leather Lane');assert.equal(schema.address.postalCode,'EC1N 7TJ');assert.equal(schema.telephone,'+447594442577');
 });
-test('diamond pricing is visible semantic content and navigation uses real anchors',()=>{
- assert.ok(!html.includes('id="transparencyModal"'));
- const section=html.match(/<section class="transparency-section"[^>]*>([\s\S]*?)<\/section>/)[1];
- assert.match(section,/Lab-Grown Diamonds/);assert.match(section,/<caption>/);assert.match(section,/£594/);assert.ok(!section.includes('aria-hidden'));assert.ok(!section.includes('role="dialog"'));
- assert.equal((html.match(/href="#diamond-pricing"/g)||[]).length,2);
+test('home links to the bespoke FAQ and omits the retired stone price table',()=>{
+ assert.doesNotMatch(html,/id="diamond-pricing"|Lab-Grown Diamond Prices in GBP|href="#diamond-pricing"/);
+ assert.match(html,/href="faq.html"/);
 });
 test('scripts and all HTML inline scripts parse; all active images have alt attributes',()=>{
  for(const name of fs.readdirSync(root).filter(n=>n.endsWith('.js')&&!n.startsWith('test_')))new vm.Script(fs.readFileSync(path.join(root,name),'utf8'),{filename:name});
